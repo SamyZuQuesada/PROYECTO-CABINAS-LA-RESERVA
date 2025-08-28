@@ -9,41 +9,48 @@
 
 /*brandon Header */
 
-
 .busqueda {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px;
+  padding: 100px;
   border-radius: 60px;
-  background: #1b9932;
-  background: -webkit-linear-gradient(to right, #0e7c1d, #1ab660);
-  background: linear-gradient(to right, #000000, #1eb319);
-  box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);
+  width: 100%;
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.7
+  ); /* fondo Transparencia*/
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-
 
 .opciones {
   display: flex;
-  gap: 1rem;
+  gap: 10rem;
 }
 
 .opciones li {
   list-style: none;
+  padding: 20px 15px;
 }
 
 .opciones li a {
-  font-size: 40px;
+  font-size: 70px;
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 5px 15px;
   border-radius: 10px;
   transition: background 0.3s ease;
   -webkit-box-reflect: below 10px;
 }
 
 .opciones li a:hover {
-  background: #f4e9cd;
+  background: #dfeaa6;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
