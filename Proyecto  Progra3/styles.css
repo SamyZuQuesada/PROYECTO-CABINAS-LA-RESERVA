@@ -16,12 +16,11 @@
   padding: 100px;
   border-radius: 60px;
   width: 100%;
-  background-color: rgba(
-    51,
-    51,
-    51,
-    0.7
-  ); /* fondo Transparencia*/
+  background-color: rgba(51,
+      51,
+      51,
+      0.7);
+  /* fondo Transparencia*/
   color: white;
   position: fixed;
   top: 0;
@@ -58,133 +57,160 @@
 /*FOOTER SAMY*/
 
 .footer {
-    background: #a6af9c;
-    color: #f3f3f3;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px 30px 20px 30px;
-    flex-wrap: wrap;
-    border-radius: 10px 10px 0 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+  background: #a6af9c;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 30px 20px 30px;
+  flex-wrap: wrap;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .footer-section {
-    flex: 1 1 220px;
-    margin: 0 20px;
-    min-width: 200px;
+  flex: 1 1 220px;
+  margin: 0 20px;
+  min-width: 200px;
 }
 
 .logo-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .footer-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background: #798170;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #798170;
 }
 
 .footer-section h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 
-.footer-section p, .footer-section i {
-    font-size: 0.98em;
-    margin: 5px 0;
-    color: #4b5343;
+.footer-section p,
+.footer-section i {
+  font-size: 0.98em;
+  margin: 5px 0;
+  color: #4b5343;
 }
 
 .footer-icons-vertical {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    border-radius: 6px;
-    background:#798170;
-    transition: transform 0.2s;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #798170;
+  transition: transform 0.2s;
 }
+
 .icon:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .copyright {
-    font-size: 0.9em;
-    color: #4b5343;
-    text-align: center;
-    margin-top: 10px;
+  font-size: 0.9em;
+  color: #4b5343;
+  text-align: center;
+  margin-top: 10px;
 }
 
 @media (max-width: 800px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 10px 10px 10px;
-    }
-    .footer-section {
-        margin: 15px 0;
-        min-width: 0;
-        width: 100%;
-        text-align: center;
-    }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px 10px 10px;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Carrusel de Instalaciones Samy */
-.carruselContenedor{
+.ContenedorCabinas {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.cabinasEstilo{
   display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.cabina{
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  scroll-snap-align: start;
+  padding-bottom: 15px;
+}
+
+.cabinasEstilo img {
   width: 100%;
-  height: 100vh;
-  overflow-x: scroll;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
-.cabinasCarrusel {
-  display: flex;
-}
-.cabinasCarrusel img{
-  flex: 0 0 100%;
-  width: 150px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20%;
+
+.cabinasCarrusel p {
+  margin-top: 8px;
+  font-size: 16px;
 }
 
 /* Andrey Comentarios */
-.seccion{
+.seccion {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 60px 200px 60px 200px;
 }
-.comentarios{
+
+.comentarios {
   border: 1px solid;
   border-radius: 12px;
   padding: 12px;
 }
-.usuario{
+
+.usuario {
   display: flex;
   align-items: center;
-  gap: 10px ;
+  gap: 10px;
 }
-.usuario img{
+
+.usuario img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
-.rating{
+
+.rating {
   color: gold;
   font-size: 16px;
 }
