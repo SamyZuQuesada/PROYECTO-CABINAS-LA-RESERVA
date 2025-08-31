@@ -143,3 +143,30 @@
         text-align: center;
     }
 }
+/* Andrey Comentarios */
+.seccion{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px 200px 60px 200px;
+}
+.comentarios{
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 12px;
+  
+}
+.usuario{
+  display: flex;
+  align-items: center;
+  gap: 10px ;
+}
+.usuario img{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.rating{
+  color: gold;
+  font-size: 16px;
+}
