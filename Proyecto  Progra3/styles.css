@@ -162,10 +162,10 @@ display: flex;
 
 .cabinasCarrusel img{
   flex: 0 0 100%;
-  width: 120px;
+  width: 150px;
   height: auto;
   object-fit: contain;
-
-  border-radius: 20px;
+  
+  border-radius: 20%;
 }
 
