@@ -143,3 +143,29 @@
         text-align: center;
     }
 }
+
+
+/* Carrusel de Instalaciones Samy */
+
+.carruselContenedor{
+display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+
+
+}
+
+.cabinasCarrusel {
+  display: flex;
+}
+
+.cabinasCarrusel img{
+  flex: 0 0 100%;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+
+  border-radius: 20px;
+}
+
