@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: "Times New Roman", Times, serif;
+body {
+  font-style: italic;
 }
 
 .contenedor {
@@ -14,6 +14,7 @@ body{
   padding: 1px;
 }
 
+/* Hero Jairo*/
 .hero-section {
   position: relative;
   height: 100vh;
@@ -23,6 +24,7 @@ body{
   align-items: center;
   justify-content: center;
 }
+
 .hero-background {
   position: absolute;
   top: 0;
@@ -33,6 +35,7 @@ body{
   object-position: center;
   z-index: 1;
 }
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -41,6 +44,18 @@ body{
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
+}
+.hero-texto{
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px #000;
+  text-align: center;
+  padding: 20px;
 }
 
 header {
@@ -59,6 +74,8 @@ header {
   margin: 0 60px;
   box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);
   backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
 }
 
 
@@ -85,21 +102,22 @@ header {
 
 .opciones {
   display: flex;
-  gap: 10rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .opciones li {
   list-style: none;
-  padding: 20px 15px;
+  padding: 10px 8px;
 }
 
 .opciones li a {
-  font-size: 70px;
+  font-size: 32px;
   color: #ffffff;
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 10px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
   -webkit-box-reflect: below 10px;
 }
 
@@ -107,6 +125,10 @@ header {
   background: #dfeaa6;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
+}
+.logo-navbar {
+  height: 100px;
+  margin-right: 30px;
 }
 
 /*FOOTER SAMY*/
@@ -120,18 +142,19 @@ header {
   padding: 40px 30px 20px 30px;
   flex-wrap: wrap;
   border-radius: 10px 10px 0 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-style: italic;
 }
-.pie h2, .pie h3, .pie h4{
-font-style: italic;
-display: flex;
-justify-content: center;
+
+.footer h2 {
+  font-style: italic;
+  display: flex;
+  justify-content: center;
 }
 
 .logos img {
-            width: 60px;
-            height: auto;
-        }
+  width: 60px;
+  height: auto;
+}
 
 .footer-section {
   flex: 1 1 220px;
@@ -154,14 +177,6 @@ justify-content: center;
   border-radius: 8px;
   background: #798170;
 }
-.pie{
-  background: #628D3D;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  padding: 10px 0;
-}
 
 .footer-section h2 {
   font-size: 1.2em;
@@ -176,6 +191,7 @@ justify-content: center;
   font-size: 0.98em;
   margin: 5px 0;
   color: #4b5343;
+  font-style: italic;
 }
 
 .footer-icons-vertical {
@@ -219,23 +235,27 @@ justify-content: center;
   }
 }
 
-/* Carrusel de Instalaciones Samy */
+/* Instalaciones Samy */
+.tituloPrincipal {
+  text-align: center;
+  font-style: italic;
+}
 .ContenedorCabinas {
   padding: 20px;
   white-space: nowrap;
 }
 
-.cabinasEstilo{
+.cabinasEstilo {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 
-.cabina{
+.cabina {
   flex: 0 0 300px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding-bottom: 15px;
   font-style: italic;
@@ -255,11 +275,16 @@ justify-content: center;
 }
 
 /* Andrey Comentarios */
+h1{
+  text-align: center;
+  font-style: italic;
+}
 .seccion {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 60px 200px 60px 200px;
+  font-style: italic;
 }
 
 .comentarios {
