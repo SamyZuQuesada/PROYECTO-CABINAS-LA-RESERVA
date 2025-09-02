@@ -148,9 +148,6 @@
 
 /* Carrusel de Instalaciones Samy */
 .ContenedorCabinas {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   padding: 20px;
   white-space: nowrap;
 }
@@ -167,8 +164,8 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-  scroll-snap-align: start;
   padding-bottom: 15px;
+  font-style: italic;
 }
 
 .cabinasEstilo img {
@@ -179,7 +176,7 @@
   border-top-right-radius: 12px;
 }
 
-.cabinasCarrusel p {
+.cabinasEstilo p {
   margin-top: 8px;
   font-size: 16px;
 }
