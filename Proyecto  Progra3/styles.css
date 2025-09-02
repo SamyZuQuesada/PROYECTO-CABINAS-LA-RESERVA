@@ -1,11 +1,66 @@
-/*conntenedor */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Times New Roman", Times, serif;
+}
 
 .contenedor {
   max-width: 3000px;
   margin: 0 auto;
   padding: 1px;
-  font-family: "Times New Roman", Times, serif;
 }
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+}
+
+.menu {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 179, 25, 0.8));
+  padding: 20px 60px;
+  border-radius: 60px;
+  margin: 0 60px;
+  box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);
+  backdrop-filter: blur(10px);
+}
+
 
 /*brandon Header */
 
@@ -67,6 +122,16 @@
   border-radius: 10px 10px 0 0;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
+.pie h2, .pie h3, .pie h4{
+font-style: italic;
+display: flex;
+justify-content: center;
+}
+
+.logos img {
+            width: 60px;
+            height: auto;
+        }
 
 .footer-section {
   flex: 1 1 220px;
@@ -89,6 +154,13 @@
   border-radius: 8px;
   background: #798170;
 }
+.pie{
+  background: #628D3D;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
 
 .footer-section h2 {
   font-size: 1.2em;
