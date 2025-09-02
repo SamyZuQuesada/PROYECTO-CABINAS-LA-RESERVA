@@ -1,50 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*conntenedor */
+body {
+  font-style: italic;
+}
 
 .contenedor {
   max-width: 3000px;
   margin: 0 auto;
   padding: 1px;
-  font-family: "Times New Roman", Times, serif;
 }
 
-/*brandon Header */
+/* Hero Jairo*/
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.hero-texto{
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px #000;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+}
+
+.menu {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 179, 25, 0.8));
+  padding: 20px 60px;
+  border-radius: 60px;
+  margin: 0 60px;
+  box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+}
+
+
+/*brandon Header */
 
 .busqueda {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px;
+  padding: 100px;
   border-radius: 60px;
-  background: #1b9932;
-  background: -webkit-linear-gradient(to right, #0e7c1d, #1ab660);
-  background: linear-gradient(to right, #000000, #1eb319);
-  box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);
+  width: 100%;
+  background-color: rgba(51,
+      51,
+      51,
+      0.7);
+  /* fondo Transparencia*/
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-
 
 .opciones {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .opciones li {
   list-style: none;
+  padding: 10px 8px;
 }
 
 .opciones li a {
-  font-size: 40px;
+  font-size: 32px;
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 5px 15px;
   border-radius: 10px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
   -webkit-box-reflect: below 10px;
 }
 
 .opciones li a:hover {
-  background: #f4e9cd;
+  background: #dfeaa6;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
+}
+.logo-navbar {
+  height: 100px;
+  margin-right: 30px;
+}
+
+/*FOOTER SAMY*/
+
+.footer {
+  background: #a6af9c;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 30px 20px 30px;
+  flex-wrap: wrap;
+  border-radius: 10px 10px 0 0;
+  font-style: italic;
+}
+
+.footer h2 {
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
+.logos img {
+  width: 60px;
+  height: auto;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  margin: 0 20px;
+  min-width: 200px;
+}
+
+.logo-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #798170;
+}
+
+.footer-section h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.footer-section p,
+.footer-section i {
+  font-size: 0.98em;
+  margin: 5px 0;
+  color: #4b5343;
+  font-style: italic;
+}
+
+.footer-icons-vertical {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #798170;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  font-size: 0.9em;
+  color: #4b5343;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px 10px 10px;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Instalaciones Samy */
+.tituloPrincipal {
+  text-align: center;
+  font-style: italic;
+}
+.ContenedorCabinas {
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.cabinasEstilo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cabina {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  font-style: italic;
+}
+
+.cabinasEstilo img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.cabinasEstilo p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* Andrey Comentarios */
+h1{
+  text-align: center;
+  font-style: italic;
+}
+.seccion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px 200px 60px 200px;
+  font-style: italic;
+}
+
+.comentarios {
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.rating {
+  color: gold;
+  font-size: 16px;
 }
