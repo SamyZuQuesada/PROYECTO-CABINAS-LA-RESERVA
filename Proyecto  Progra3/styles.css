@@ -273,6 +273,58 @@ header {
   margin-top: 8px;
   font-size: 16px;
 }
+/*carrusel paisaje*/
+.fotos-paisaje {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel-paisaje {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide_paisaje {
+  flex: 0 0 33.33%
+}
+
+.slide_paisaje img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+       
+btn-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+btn-carrusel:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.1);
+}
+
+
 
 /* Andrey Comentarios */
 h1{
