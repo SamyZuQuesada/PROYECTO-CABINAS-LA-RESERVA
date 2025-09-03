@@ -45,14 +45,15 @@ body {
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
-.hero-texto{
+
+.hero-texto {
   position: absolute;
   z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-shadow: 2px 2px 8px #000;
   text-align: center;
   padding: 20px;
@@ -103,7 +104,7 @@ header {
 .opciones {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .opciones li {
@@ -126,9 +127,14 @@ header {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
+
 .logo-navbar {
+  width: 100px;
   height: 100px;
-  margin-right: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*FOOTER SAMY*/
@@ -240,6 +246,7 @@ header {
   text-align: center;
   font-style: italic;
 }
+
 .ContenedorCabinas {
   padding: 20px;
   white-space: nowrap;
@@ -273,6 +280,7 @@ header {
   margin-top: 8px;
   font-size: 16px;
 }
+
 /*carrusel paisaje*/
 .fotos-paisaje {
   position: relative;
@@ -299,7 +307,7 @@ header {
   display: block;
 }
 
-       
+
 btn-carrusel {
   position: absolute;
   top: 50%;
@@ -324,16 +332,17 @@ btn-carrusel:hover {
   transform: translateY(-50%) scale(1.1);
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
 
 /* Andrey Comentarios */
-h1{
+h1 {
   text-align: center;
   font-style: italic;
 }
+
 .seccion {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
