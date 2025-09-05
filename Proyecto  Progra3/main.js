@@ -10,7 +10,7 @@ class PaisajeCarousel {
     this.carrusel.style.width = `${this.totalSlides * 100}%`;
 
     this.init();
-    this.updateCarrusel(); // posición inicial
+    this.updateCarrusel();
   }
 
   init() {
@@ -31,13 +31,13 @@ class PaisajeCarousel {
 
   prevSlide() {
     this.currentIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
-    this.updateCarrusel(); // <- nombre correcto
+    this.updateCarrusel(); 
   }
 
   updateCarrusel() {
     // Mueve 100/totalSlides % por índice
     const translateX = -(this.currentIndex * (100 / this.totalSlides));
-    this.carrusel.style.transform = `translateX(${translateX}%)`; // <- backticks ✅
+    this.carrusel.style.transform = `translateX(${translateX}%)`; 
   }
 }
 
