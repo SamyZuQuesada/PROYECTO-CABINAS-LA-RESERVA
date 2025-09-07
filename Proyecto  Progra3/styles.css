@@ -92,6 +92,13 @@ header {
   align-items: center;
 }
 
+/* Sobre nosotros */
+.texto-sobre-nosotros {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  margin-bottom: 40px;
+}
+
 
 /*brandon Header */
 
