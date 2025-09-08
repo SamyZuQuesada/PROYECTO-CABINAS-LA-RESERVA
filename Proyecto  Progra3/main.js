@@ -17,7 +17,6 @@ class PaisajeCarousel {
     this.botonAdelante.addEventListener('click', () => this.nextSlide());
     this.botonAtras.addEventListener('click', () => this.prevSlide());
 
-    // Navegación con teclado
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.prevSlide();
       if (e.key === 'ArrowRight') this.nextSlide();
@@ -35,7 +34,6 @@ class PaisajeCarousel {
   }
 
   updateCarrusel() {
-    // Mueve 100/totalSlides % por índice
     const translateX = -(this.currentIndex * (100 / this.totalSlides));
     this.carrusel.style.transform = `translateX(${translateX}%)`; 
   }
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class ServicioCarusel {
   constructor() {
-    // IDs/clases coherentes con tu HTML
     this.carrusel = document.getElementById('carrusel-servicio');
     this.botonAtras = document.getElementById('botonAtrasSer');
     this.botonAdelante = document.getElementById('botonAdelanteSer');
@@ -91,6 +88,5 @@ class ServicioCarusel {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Crear la clase correcta
   new ServicioCarusel();
 });
