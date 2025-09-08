@@ -1,87 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Cabinas_La_Reserva</title>
 </head>
+
 <body>
+    <header>
+        <nav class="menu">
+            <img src="Imagenes/LOGO CABINAS.png" alt="Logo" class="logo-navbar">
+            <ul class="opciones">
+                <li><a href="#instalaciones">Instalaciones</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#ubicacion">Ubicacion</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-section">
+        <img src="Imagenes/hero.jpg" alt="Cabinas La Reserva" class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-texto">
+            ¡Bienvenidos a Cabañas La Reserva!<br>
+            El lugar ideal para desconectarte, respirar aire puro y
+            disfrutar la belleza de la Reserva Indígena Matambu, Guanacaste<br>
+        </div>
+    </section>
+
+    <section class="sobre-nosotros">
+        <h1 class="tituloPrincipal"> Sobre Nosotros: </h1>
+        <p class="texto-sobre-nosotros"> </p>
+    </section>
 
 
+    <section class=" instalaciones">
+        <h1 class="tituloPrincipal"> Nuestras Instalaciones: </h1>
 
-       <header class="busqueda">
-            
-                  <div class="Fondo"><img src="" alt=""></div>
-            <nav class="menu">
-                <ul class="opciones">
-
-                    <li><a href="#instalaciones">Instalaciones</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#Ubicacion">Ubicacion</a></li>
-                    <li><a href="#Comentarios">comentarios</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        
-
-        <section class=" instalaciones">
-            <h1 class="tituloPrincipal"> Nuestras Instalaciones </h1>
-
-            <section class="carruselContenedor">
-                <div class="cabinasCarrusel">
-                    <img src="Cabina1.jpg" alt="Cabina1">
-                    <p> Descripción de la Cabina 1</p>
-                    <img src="Cabina2.jpg" alt="Cabina2">
-                    <p> Descripción de la Cabina 2</p>
-                    <img src="Cabina3.jpg" alt="Cabina3">
-                    <p> Descripción de la Cabina 3</p>
+        <section class="ContenedorCabinas">
+            <div class="cabinasEstilo">
+                <div class="cabina">
+                    <img src="Imagenes/Cabina1.jpg" alt="Cabina1">
+                    <p class="texto"> Descripción de la Cabina 1</p><br>
                 </div>
-            </section> 
-
+                <div class="cabina">
+                    <img src="Imagenes/Cabina2.jpg" alt="Cabina2">
+                    <p class="texto"> Descripción de la Cabina 2</p><br>
+                </div>
+                <div class="cabina">
+                    <img src="Imagenes/Cabina3.jpg" alt="Cabina3">
+                    <p class="texto"> Descripción de la Cabina 3</p><br>
+                </div>
+            </div>
         </section>
 
+    </section>
+
+    <section class="servicios">
 
 
+    </section>
 
-     <section class="servicios">
+    <h2> Galería de fotos </h2>
+    <p class="texto-galeria"> Te mostramos un poco de las cosas que puedes encontrar a los alrededores de nuestras
+        cabañas.</p>
 
+    <section class="fotos-paisaje">
 
-     </section>
+        <div class="carrusel-paisaje" id="carrusel-paisaje">
 
+            <div class="slide_paisaje">
+                <img src="Imagenes/Imagen1.jpg" alt="paisaje 1">
+            </div>
 
+            <div class="slide_paisaje">
+                <img src="Imagenes/Imagen2.jpg" alt="paisaje 2">
+            </div>
 
-        <section class="fotos">
-            
-        </section>
+            <div class="slide_paisaje">
+                <img src="Imagenes/Imagen3.jpg" alt="paisaje 3">
+            </div>
+            <div class="slide_paisaje">
+                <img src="Imagenes/Imagen4.jpg" alt="paisaje 4">
+            </div>
 
+        </div>
 
+        <button id="botonAtras" class="btn-carrusel btn-carrusel-left" aria-label="Anterior">&#10094;</button>
+        <button id="botonAdelante" class="btn-carrusel btn-carrusel-right" aria-label="Siguiente">&#10095;</button>
 
+    </section>
 
-        <section class=" ubicacion">
+    <section class=" ubicacion">
+        <h2 class="tituloPrincipal"> Nuestra ubicación: </h2>
+        <div class="Mapa" alt="Mapa de ubicacion">
+            <a href="https://maps.app.goo.gl/u8MYioT6L1MmvWVs5" target="_blank">
+                <img src="Imagenes/Captura de pantalla 2025-09-05 112718.png" alt="Mapa de ubicacion">
+            </a>
+        </div>
 
-        </section>
+    </section>
 
-
-        <section class="Comentario">
-                        <h1>Comentarios:</h1>
-            <div class="seccion">
+    <section class="Comentario">
+        <h1>Comentarios:</h1>
+        <div class="seccion">
             <div class="comentarios">
                 <div class="usuario">
-                    <img src="user.icon.png" alt="icono usuario">
+                    <img src="Imagenes/user.icon.png" alt="icono usuario">
                     <span>Teilor Perez</span>
                 </div>
                 <p>Excelente lugar, un paraiso para despegarse de la tecnologia.</p>
                 <div class="rating">
-                     ★★★★★
+                    ★★★★★
                 </div>
 
             </div>
             <div class="comentarios">
                 <div class="usuario">
-                    <img src="user.icon.png" alt="icono usuario">
+                    <img src="Imagenes/user.icon.png" alt="icono usuario">
                     <span>Alfredo Herrera Rodriguez</span>
                 </div>
                 <p>Tranquilidad total. Excelente anfitriona.</p>
@@ -93,55 +132,56 @@
             </div>
             <div class="comentarios">
                 <div class="usuario">
-                    <img src="user.icon.png" alt="icono usuario">
+                    <img src="Imagenes/user.icon.png" alt="icono usuario">
                     <span>Walter Piedra M</span>
                 </div>
-                <p>Muy bien y atecion excelente.</p>
+                <p>Muy bien y atención excelente.</p>
                 <div class="rating">
                     ★★★★★
                 </div>
 
             </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-section ubicacion">
+            <h2>Ubicación:</h2>
+            <br>
+            <p class="texto-footer">De la plaza de deportes 75 metros al sur y 25 al oeste, Provincia de Guanacaste,
+                Matambú</p>
+            <div style="margin-top: 10px;">
+                <a href="https://maps.app.goo.gl/u8MYioT6L1MmvWVs5" target="_blank">
+                    <img src="Imagenes/MAPALOGO.png" alt="Mapa" class="icon">
+                </a>
             </div>
-
-        </section>
-
-        <footer class="footer">
-            <div class="footer-section ubicacion">
-                <h2>Ubicación</h2>
-                <p>De la plaza de deportes 75 metros al sur y 25 al oeste, Provincia de Guanacaste, Matambú</p>
+        </div>
+        <div class="footer-section logo">
+            <div class="logo-center">
+                <h2>Cabañas La Reserva</h2>
+                <img src="Imagenes/LOGO CABINAS.png" alt="Logo Cabañas La Reserva" class="footer-logo">
             </div>
-            <div class="footer-section logo">
-                <div class="logo-center">
-                    <img src="LOGO CABINAS.png" alt="Logo Cabañas La Reserva" class="footer-logo">
-                    <h2>Cabañas La Reserva</h2>
-                </div>
-                <p class="copyright">© 2025 Proyecto-Cabañas La Reserva.</p>
+            <p class="copyright">© 2025 Proyecto-Cabañas La Reserva.</p>
+        </div>
+        <div class="footer-section contacto">
+            <h2>Contacto</h2>
+            <div class="footer-icons-vertical">
+                <a href="https://wa.me/50683615879" target="_blank" rel="noopener noreferrer">
+                    <img src="Imagenes/LOGOWHASTAPP.jpg" alt="WhatsApp" class="icon">
+                </a>
+
+                <a href="https://www.facebook.com/share/1KW5Xm9JLm/">
+                    <img src="Imagenes/FACEBOOKLOGO.jpg" alt="Facebook" class="icon">
+
+                </a>
             </div>
-            <div class="footer-section contacto">
-                <h2>Contacto</h2>
-                <div class="footer-icons-vertical">
-                    <img src="WHATSAPPLOGO.webp" alt="WhatsApp" class="icon">
-
-                    <a href="https://www.facebook.com/share/1KW5Xm9JLm/">
-                        <img src="LOGO FACEBOOK.png" alt="Facebook" class="icon">
-
-                    </a>
-                    <a href="https://maps.app.goo.gl/u8MYioT6L1MmvWVs5">
-                        <img src="LOGOMAPA.png" alt="Mapa" class="icon">
-                    </a>
-                </div>
-                <p><i>Telefonos: 506 8981-3481 , 8361-5879 , 8857-7250</i></p>
-                <p>Hospedajelareserva8981@gmail.com</p>
-            </div>
-        </footer>
-
-
-     
-
-
-
+            <p class="texto-footer"><i>Telefonos: 506 8981-3481 , 8361-5879 , 8857-7250</i></p>
+            <p class="texto-footer">Hospedajelareserva8981@gmail.com</p>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>
+
 </html>
