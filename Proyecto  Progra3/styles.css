@@ -38,6 +38,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+
 }
 
 .hero-background {
@@ -72,6 +73,19 @@
   text-shadow: 2px 2px 8px #000;
   text-align: center;
   padding: 20px;
+    margin: 0;
+  font-family: 'Arial', sans-serif;
+} 
+.hero-texto h1 {
+  font-size: 10rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+.hero-texto h2 {
+  text-shadow: #000 2px 2px 8px;
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
 header {
@@ -172,7 +186,6 @@ header {
   margin: 0 0 20px 0;
 }
 
-/* ====== Contenedor principal ====== */
 .fotos-Servicios {
   position: relative;
   max-width: 1000px;
@@ -186,6 +199,8 @@ header {
 
 /* ====== Carrusel ====== */
 .carrusel-servicio {
+   max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
@@ -193,6 +208,7 @@ header {
 
 /* Cada slide */
 .slide_Servicio {
+
   position: relative;
   flex: 0 0 100%;
   /* un slide a la vez */
