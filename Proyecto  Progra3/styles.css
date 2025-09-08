@@ -83,12 +83,14 @@ header {
 
 .menu {
   /*background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 179, 25, 0.8));*/
-  padding: 20px 60px;
+  padding: 80px 80px;
   border-radius: 60px;
   margin: 0 60px;
   /*box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);*/
   backdrop-filter: blur(10px);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+
   align-items: center;
 }
 
@@ -120,6 +122,10 @@ header {
   left: 0;
   z-index: 1000;*/
 }
+.logo-navbar
+{
+  white-space: nowrap;
+}
 
 .opciones {
   display: flex;
@@ -129,11 +135,11 @@ header {
 
 .opciones li {
   list-style: none;
-  padding: 10px 8px;
+  padding: 15px 15px;
 }
 
 .opciones li a {
-  font-size: 25px;
+  font-size: 90px;
   color: black;
   text-decoration: none;
   padding: 5px 15px;
@@ -149,13 +155,179 @@ header {
 }
 
 .logo-navbar {
-  width: 100px;
-  height: 100px;
+  width:200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
+/*Section  Brandon Servicio*/
+
+
+.servicios {
+  width: min(100%, 1100px);
+  margin: auto;
+  padding: 12px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.servicios h2 {
+  text-align: center;
+  margin-bottom: 6px;
+  font-size: clamp(22px, 4vw, 32px);
+}
+
+.texto-galeria {
+  text-align: center;
+  color: #444;
+  margin: 0 0 20px 0;
+}
+
+/* ====== Contenedor principal ====== */
+.fotos-Servicios {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #000; /* por si la imagen tarda */
+}
+
+/* ====== Carrusel ====== */
+.carrusel-servicio {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+/* Cada slide */
+.slide_Servicio {
+  position: relative;
+  flex: 0 0 100%; /* un slide a la vez */
+  height: clamp(320px, 55dvh, 560px);
+  overflow: hidden;
+}
+
+.slide_Servicio img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Overlay de texto */
+.slide_Servicio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #0000 0%, #0006 60%, #000a 100%);
+  z-index: 1;
+}
+
+.overlayServicio {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  padding: clamp(14px, 4vw, 26px);
+  color: #fff;
+}
+
+.overlayServicio h3 {
+  margin: 0 0 6px 0;
+  font-size: clamp(18px, 3.2vw, 28px);
+  font-weight: 800;
+}
+
+.overlayServicio ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: clamp(13px, 2.6vw, 16px);
+}
+
+/* ====== Botones de navegación ====== */
+.btn-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #b7e4c7;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2.2rem;
+  color: #2d6a4f;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  z-index: 10;
+  opacity: 0.9;
+}
+
+.btn-carrusel:hover {
+  background: #b7e4c7;
+  color: #1b4332;
+  transform: translateY(-50%) scale(1.08);
+  opacity: 1;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+}
+
+.btn-carrusel-left {
+  left: 18px;
+}
+
+.btn-carrusel-right {
+  right: 18px;
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  z-index: 3;
+  padding: 6px;
+}
+
+.dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 0;
+  background: #ffffffaa;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dots button[aria-current="true"] {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+/* ====== Responsivo   Carrusel====== */
+@media (max-width: 600px) {
+  .btn-carrusel {
+    width: 48px;
+    height: 48px;
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
 
 /*FOOTER SAMY*/
 
