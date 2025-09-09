@@ -185,7 +185,6 @@ header {
 .opciones {
   display: flex;
   gap: 1rem;
-
 }
 
 .opciones li {
@@ -213,6 +212,8 @@ header {
   box-shadow: none;
   transform: scale(1.05);
 }
+.logo {
+  padding-left: 50px;
 
 .logo {
   padding-left: 50px;
