@@ -77,13 +77,13 @@
   font-family: 'Arial', sans-serif;
 } 
 .hero-texto h1 {
-  font-size: 10rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
 .hero-texto h2 {
   text-shadow: #000 2px 2px 8px;
-  font-size: 6rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -97,15 +97,61 @@ header {
   /* padding: 20px 0; */
 }
 
-.menu {
-  padding: 20px 40px;
-  border-radius: 60px;
-  margin: 0 20px;
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* Contenedor hero */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
+
+/* Imagen de fondo */
+.hero-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Capa hero */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.441);
+  z-index: 1;
+  border: none;
+}
+
+/* Header transparente */
+.superior {
+  position: absolute;   
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 100;
+  background: transparent; 
+}
+
+.superior .opciones {
+  display: flex;
+
+  list-style: none;
+}
+
+.superior .opciones a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s;
+}
+
+
 
 /* Sobre nosotros */
 .texto-sobre-nosotros {
@@ -115,19 +161,16 @@ header {
 }
 
 
-/*brandon Header */
+/*Brandon Navbar*/
 
-.busqueda {
+.superior {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
-  border-radius: 60px;
-  width: 100%;
-  background-color: rgba(51,
-      51,
-      51,
-      0.7);
+  padding: 20px;
+
+
+
 }
 
 .logo-navbar {
@@ -136,38 +179,38 @@ header {
 
 .opciones {
   display: flex;
-  align-items: center;
-  gap: 5rem;
+  gap: 1rem;
+  
 }
 
 .opciones li {
   list-style: none;
-  padding: 15px 15px;
-}
-
-.opciones li a {
-  font-size: 25px;
-  color: black;
+    font-size: 5px;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
+}
+
+.opciones li a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
   -webkit-box-reflect: below 10px;
 }
 
 .opciones li a:hover {
-  background: #dfeaa6;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  background: #dfeaa6a9 ;
+  box-shadow: none;
   transform: scale(1.05);
 }
+.logo {
+  padding-left: 50px;
 
-.logo-navbar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*Section  Brandon Servicio*/
@@ -414,10 +457,6 @@ header {
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border-radius: 50%;
-  background: #fff;
-  border: 2.5px solid #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
   transition: transform 0.2s, box-shadow 0.2s;
   display: inline-block;
 }
