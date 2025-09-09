@@ -9,11 +9,13 @@
   body {
     font-size: 16px;
   }
+
   .tu-clase {
     width: 100%;
     flex-direction: column;
   }
 }
+
 @media (max-width: 480px) {
   .tu-clase {
     padding: 10px;
@@ -75,13 +77,13 @@
   font-family: 'Arial', sans-serif;
 } 
 .hero-texto h1 {
-  font-size: 10rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
 .hero-texto h2 {
   text-shadow: #000 2px 2px 8px;
-  font-size: 6rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -95,18 +97,61 @@ header {
   /* padding: 20px 0; */
 }
 
-.menu {
-  /*background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 179, 25, 0.8));*/
-  padding: 80px 80px;
-  border-radius: 60px;
-  margin: 0 60px;
-  /*box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);*/
-  backdrop-filter: blur(10px);
-  display: grid;
-  grid-template-columns: 1fr  1fr;
 
-  align-items: center;
+/* Contenedor hero */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
+
+/* Imagen de fondo */
+.hero-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Capa hero */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.441);
+  z-index: 1;
+  border: none;
+}
+
+/* Header transparente */
+.superior {
+  position: absolute;   
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 100;
+  background: transparent; 
+}
+
+.superior .opciones {
+  display: flex;
+
+  list-style: none;
+}
+
+.superior .opciones a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s;
+}
+
+
 
 /* Sobre nosotros */
 .texto-sobre-nosotros {
@@ -116,65 +161,56 @@ header {
 }
 
 
-/*brandon Header */
+/*Brandon Navbar*/
 
-.busqueda {
+.superior {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
-  border-radius: 60px;
-  width: 100%;
-  background-color: rgba(51,
-      51,
-      51,
-      0.7);
-  /* fondo Transparencia*/
-  /* color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;*/
+  padding: 20px;
+
+
+
 }
-.logo-navbar
-{
+
+.logo-navbar {
   white-space: nowrap;
 }
 
 .opciones {
   display: flex;
-  align-items: center;
-  gap: 5rem;
+  gap: 1rem;
+  
 }
 
 .opciones li {
   list-style: none;
-  padding: 15px 15px;
-}
-
-.opciones li a {
-  font-size: 90px;
-  color: black;
+    font-size: 5px;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
+}
+
+.opciones li a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
   -webkit-box-reflect: below 10px;
 }
 
 .opciones li a:hover {
-  background: #dfeaa6;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  background: #dfeaa6a9 ;
+  box-shadow: none;
   transform: scale(1.05);
 }
+.logo {
+  padding-left: 50px;
 
-.logo-navbar {
-  width:200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*Section  Brandon Servicio*/
@@ -184,13 +220,7 @@ header {
   width: min(100%, 1100px);
   margin: auto;
   padding: 12px;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-.servicios h2 {
-  text-align: center;
-  margin-bottom: 6px;
-  font-size: clamp(22px, 4vw, 32px);
+  font-style: italic;
 }
 
 .texto-galeria {
@@ -206,7 +236,8 @@ header {
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  background: #000; /* por si la imagen tarda */
+  background: #000;
+  /* por si la imagen tarda */
 }
 
 /* ====== Carrusel ====== */
@@ -222,7 +253,8 @@ header {
 .slide_Servicio {
 
   position: relative;
-  flex: 0 0 100%; /* un slide a la vez */
+  flex: 0 0 100%;
+  /* un slide a la vez */
   height: clamp(320px, 55dvh, 560px);
   overflow: hidden;
 }
@@ -258,12 +290,16 @@ header {
   margin: 0 0 6px 0;
   font-size: clamp(18px, 3.2vw, 28px);
   font-weight: 800;
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
 }
 
 .overlayServicio ul {
   margin: 0;
   padding-left: 18px;
   font-size: clamp(13px, 2.6vw, 16px);
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
 }
 
 /* ====== Botones de navegación ====== */
@@ -283,7 +319,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  transition: all 0.25s cubic-bezier(.4, 0, .2, 1);
   z-index: 10;
   opacity: 0.9;
 }
@@ -341,10 +377,6 @@ header {
   }
 }
 
-
-
-
-
 /*FOOTER SAMY*/
 
 .footer {
@@ -394,7 +426,7 @@ header {
   border-radius: 50%;
   background: #fff;
   border: 4px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
   display: block;
 }
 
@@ -425,10 +457,6 @@ header {
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border-radius: 50%;
-  background: #fff;
-  border: 2.5px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
   transition: transform 0.2s, box-shadow 0.2s;
   display: inline-block;
 }
@@ -552,11 +580,11 @@ header {
   cursor: pointer;
   font-size: 2.2rem;
   color: #2d6a4f;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s cubic-bezier(.4,0,.2,1);
+  transition: all 0.25s cubic-bezier(.4, 0, .2, 1);
   z-index: 10;
   opacity: 0.85;
   border: 2px solid #b7e4c7;
@@ -567,7 +595,7 @@ header {
   color: #1b4332;
   opacity: 1;
   transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
 }
 
 .btn-carrusel-left {
@@ -586,6 +614,7 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .texto-galeria {
   text-align: center;
   font-family: 'Arial', sans-serif;
@@ -635,7 +664,7 @@ h1 {
 }
 
 /* Ubicacion */
-.Mapa{
+.Mapa {
   width: 100%;
   height: 400px;
   border: 2px solid #ccc;
