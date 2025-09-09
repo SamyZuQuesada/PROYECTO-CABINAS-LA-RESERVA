@@ -31,8 +31,7 @@
 /* Hero Jairo*/
 .hero-section {
   position: relative;
-  height: 95vh;
-  min-height: 600px;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -77,13 +76,13 @@
   font-family: 'Arial', sans-serif;
 } 
 .hero-texto h1 {
-  font-size: 10rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
 .hero-texto h2 {
   text-shadow: #000 2px 2px 8px;
-  font-size: 6rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -98,13 +97,16 @@ header {
 }
 
 .menu {
-  padding: 20px 40px;
+  /*background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 179, 25, 0.8));*/
+  padding: 80px 80px;
   border-radius: 60px;
-  margin: 0 20px;
+  margin: 0 60px;
+  /*box-shadow: 8px 6px 74px 29px rgba(0, 0, 0, 0.33);*/
   backdrop-filter: blur(10px);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+
   align-items: center;
-  justify-content: center;
 }
 
 /* Sobre nosotros */
@@ -115,29 +117,32 @@ header {
 }
 
 
-/*brandon Header */
+/*Brandon Navbar*/
 
-.busqueda {
+.superior {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
+  padding: 20px;
   border-radius: 60px;
   width: 100%;
-  background-color: rgba(51,
-      51,
-      51,
-      0.7);
+  background-color: rgba(51, 51, 51, 0.7);
+  /* fondo Transparencia*/
+  /* color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;*/
 }
-
-.logo-navbar {
+.logo-navbar
+{
   white-space: nowrap;
 }
 
 .opciones {
   display: flex;
-  align-items: center;
-  gap: 5rem;
+  gap: 1rem;
+  
 }
 
 .opciones li {
@@ -152,12 +157,21 @@ header {
   padding: 5px 15px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
+}
+
+.opciones li a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
   -webkit-box-reflect: below 10px;
 }
 
 .opciones li a:hover {
-  background: #dfeaa6;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  background: #dfeaa6a9 ;
+  box-shadow: none;
   transform: scale(1.05);
 }
 
@@ -168,6 +182,18 @@ header {
   object-fit: cover;
   border: 3px solid #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
 }
 
 /*Section  Brandon Servicio*/
@@ -417,7 +443,7 @@ header {
   border-radius: 50%;
   background: #fff;
   border: 2.5px solid #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
   transition: transform 0.2s, box-shadow 0.2s;
   display: inline-block;
 }
