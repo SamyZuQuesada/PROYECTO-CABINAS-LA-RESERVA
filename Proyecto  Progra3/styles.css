@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-/*Diseño responsive */
-@media (max-width: 768px) {
+/*Diseño responsive*/
+ @media (max-width: 768px) {
   body {
     font-size: 16px;
   }
@@ -166,7 +166,8 @@ header {
   margin-bottom: 40px;
 }
 
-/* NavBar */
+
+/* Brandon Navbar */
 .superior {
   display: flex;
   justify-content: space-between;
@@ -218,6 +219,7 @@ header {
 
 }
 
+/*Section Brandon Servicio*/
 .servicios {
   width: min(100%, 1100px);
   margin: auto;
@@ -378,7 +380,8 @@ header {
     font-size: 1.8rem;
   }
 }
-/* FOOTER SAMY */
+
+/*FOOTER SAMY*/ 
 .footer {
   background: #a6af9c;
   color: #f3f3f3;
@@ -540,7 +543,7 @@ header {
   font-style: normal;
 }
 
-/* Carrusel Paisaje*/
+/*carrusel paisaje*/ 
 .fotos-paisaje {
   position: relative;
   max-width: 1000px;
