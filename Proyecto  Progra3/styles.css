@@ -78,14 +78,15 @@
 }
 
 .hero-texto h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-texto h2 {
   text-shadow: #000 2px 2px 8px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -548,7 +549,9 @@ header {
 /*carrusel paisaje*/ 
 .fotos-paisaje {
   position: relative;
+  width: 100%;
   max-width: 1000px;
+  height: 500px;
   margin: 50px auto;
   overflow: hidden;
   border-radius: 15px;
@@ -556,19 +559,26 @@ header {
 }
 
 .carrusel-paisaje {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
+  width: 400%;
+  height: 100%;
   transition: transform 0.5s ease-in-out;
+  margin-bottom: 45px;
 }
 
 .slide_paisaje {
-  flex: 0 0 33.33%
+  width: 25%;
+  height: 100%;
 }
 
 .slide_paisaje img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
 }
 
 

@@ -7,8 +7,6 @@ class PaisajeCarousel {
     this.currentIndex = 0;
     this.totalSlides = this.slides.length;
 
-    this.carrusel.style.width = `${this.totalSlides * 100}%`;
-
     this.init();
     this.updateCarrusel();
   }
