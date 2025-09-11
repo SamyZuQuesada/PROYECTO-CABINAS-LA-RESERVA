@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1> Guía de Estilos Personalizadas </h1>
+        <h1> ¡Guía de Estilos Personalizadas! </h1>
     </header>
 
     <main>
@@ -17,40 +17,245 @@
         <section class="Botonoes">
 
         </section>
+        <hr>
 
         <section class="inputs">
+            <h2> Inputs </h2>
+            <p>
+                Los elementos &lt;input&gt; en HTML se usan para crear campos <br>
+                campos interactivos en un formulario web, donde permite que los <br>
+                usuarios ingresen y envien informacion de diferentes tipos, como texto, números, <br>
+                correos electrónicos, etc. <br> Ejemplos:
+            </p>
+
+            <h3> Input de Texto :</h3>
+            <input type="text" id="text" name="text" placeholder="Ingrese su texto aquí">
+            <p>Los elementos &lt;input&gt; de tipo text crean campos de texto básicos de una sola línea.</p>
+            <div class="InputCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;input type="text" id="text" name="text" placeholder="Ingrese su texto aquí"&gt;
+                </p>
+            </div>
+
+            <h3> Input de Email :</h3>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" size="30">
+            <p>Los elementos &lt;input&gt; de tipo email crean campos para ingresar direcciones de correo electrónico.
+            </p>
+            <div class="InputCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"&gt;
+                </p>
+            </div>
+
+            <h3> Input de Password :</h3>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+            <p>Los elementos &lt;input&gt; de tipo password crean campos para ingresar contraseñas de forma oculta.</p>
+            <div class="InputCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;input type="password" id="password" name="password" placeholder="Ingrese su contraseña"&gt;
+                </p>
+            </div>
+
+            <h3> Input de Textarea :</h3>
+            <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Ingrese su texto aquí"></textarea>
+            <p>Los elementos &lt;textarea&gt; se utilizan para crear campos de texto de varias líneas.</p>
+            <div class="InputCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Ingrese su texto
+                    aquí"&gt;&lt;/textarea&gt;
+                </p>
+            </div>
 
         </section>
+        <hr>
 
         <section class="formularios">
 
         </section>
+        <hr>
 
         <section class="labels">
 
         </section>
+        <hr>
 
         <section class="links">
+            <h2> Links </h2>
+            <p>
+                Los links (enlaces) en HTML se crean con la etiqueta &lt;a&gt; y se pueden personalizar con <br>
+                CSS para mostrar diferentes estados visuales. <br> Ejemplos:
+            </p>
 
+            <h3> Link Normal (a):</h3>
+            <p>
+                Es el estilo por defecto del enlace antes de que el usuario interactúe.<br>
+            </p>
+
+            <h3> Hover (a:hover):</h3>
+            <p>
+                Se activa cuando el usuario pasa el cursor por encima del enlace.<br>
+                Se suele usar para dar una pista visual (cambiar color, subrayar, aumentar tamaño).<br>
+            </p>
+
+            <h3> Active (a:active):</h3>
+            <p>
+                Se activa cuando el usuario hace clic en el enlace y lo mantiene presionado.<br>
+                Suele usarse para dar un efecto de "click real".<br>
+            </p>
+
+            <a href="https://css-tricks.com/guides/">TOCA ESTE LINK</a>
+            <div class="linkCuadro">
+                <h4> Código en HTML: </h4>
+                &lt;a href="https://css-tricks.com/guides/"&gt;TOCA ESTE LINK&lt;/a&gt;
+
+                <h4> Código en CSS: </h4>
+                <pre>
+                    /*Normal*/
+                    a{
+                     color: #101652;
+                     text-decoration: none;
+                     font-size: 18px;
+                    }
+                    /*HOVER*/
+                    a:hover {
+                     color: #49708a;
+                        text-decoration: underline;
+                     }
+                    /*Active*/
+                    a:active {
+                        color: #88abc2;
+                        font-weight: bold;
+                    }
+                </pre>
+            </div>
         </section>
+        <hr>
 
         <section class="radio-buttons">
 
         </section>
+        <hr>
 
-        <section class ="checkboxes">
+        <section class="checkboxes">
+            <h2> Checkboxes</h2>
+            <p>
+                Los checkboxes (casillas de verificación) son elementos de formulario que permiten al usuario
+                seleccionar<br>
+                una o varias opciones de una lista, cada una de las casillas funciona de manera independiente.<br>
+                Ejemplos:
+            </p>
 
+            <h3>Checkbox Normal:</h3>
+            <label>
+                <input type="checkbox" name="notificacion">
+                Recibir notificaciones
+            </label>
+            <p>
+                -Es el estado inicial por defecto.<br>
+                - El usuario puede marcarlo o desmarcarlo libremente.<br>
+                - Útil para opciones opcionales.<br>
+            </p>
+            <div class="checkboxCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="notificacion"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Recibir notificaciones<br>
+                    &lt;/label&gt;
+                </p>
+            </div>
+
+            <h3>Checkbox preseleccionado (checked)</h3>
+            <label>
+                <input type="checkbox" name="ofertas" checked>
+                Recibir ofertas
+            </label>
+            <p>
+                - Empieza marcado desde el inicio.<br>
+                - Se usa cuando quieres sugerir al usuario que esa opción ya está activada.<br>
+                - Aún puede desmarcarlo si quiere.<br>
+            </p>
+            <div class="checkboxCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="ofertas" checked&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Recibir ofertas<br>
+                    &lt;/label&gt;
+                </p>
+            </div>
+
+            <h3>Checkbox deshabilitado (disabled)</h3>
+            <label>
+                <input type="checkbox" name="actualizaciones" disabled>
+                Recibir actualizaciones (deshabilitado)
+            </label>
+            <p>
+                -El usuario no lo puede modificar.<br>
+                -Se muestra en gris.<br>
+                -Se usa para opciones no disponibles o que dependen de otra condición.<br>
+            </p>
+            <div class="checkboxCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="actualizaciones" disabled&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Recibir actualizaciones (deshabilitado)<br>
+                    &lt;/label&gt;
+                </p>
+            </div>
+
+            <h3>Checkbox indeterminado (indeterminate)</h3>
+            <label>
+                <input type="checkbox" id="miCheckbox">
+                Selección parcial
+            </label>
+            <script>
+                const chk = document.querySelector("#miCheckbox");
+                chk.indeterminate = true;
+            </script>
+            <p>
+                -Estado visual intermedio (ni marcado ni desmarcado).<br>
+                -Solo se puede activar con JavaScript.<br>
+                -Se usa en casos de selección múltiple (ej: "Seleccionar todos" cuando solo algunas opciones están
+                marcadas).<br>
+            </p>
+            <div class="checkboxCuadro">
+                <h4> Código en HTML: </h4>
+                <p>
+                    &lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="miCheckbox"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Selección parcial<br>
+                    &lt;/label&gt;<br>
+                    &lt;script&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;const chk = document.querySelector("#miCheckbox");<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;chk.indeterminate = true;<br>
+                    &lt;/script&gt;
+                </p>
+            </div>
         </section>
 
+        <hr>
         <section class="select/dropdown">
 
         </section>
-
+        <hr>
+        
         <section class="navbar">
 
         </section>
 
     </main>
+
+    <footer>
+        <p> &copy; 2025 Guía de Estilos<br>
+            Proyecto de Programación III <br>
+        </p>
+    </footer>
 
 
 </body>
