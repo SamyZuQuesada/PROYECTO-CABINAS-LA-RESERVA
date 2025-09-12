@@ -104,9 +104,9 @@ a:hover {
     color: #49708a;
     text-decoration: underline;
 }
-
+/* gonza */
 /*Active*/
 a:active {
     color: #88abc2;
     font-weight: bold;
-}
+} 
