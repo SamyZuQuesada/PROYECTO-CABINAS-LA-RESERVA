@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* gonza */
 /*Diseño responsive*/
  @media (max-width: 768px) {
   body {
@@ -656,6 +655,17 @@ h1 {
   gap: 40px;
   padding: 60px 200px 60px 200px;
   font-style: italic;
+}
+
+.Comentario{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.titulo-comentarios {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .comentarios {

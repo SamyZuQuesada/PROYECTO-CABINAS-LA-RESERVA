@@ -55,7 +55,7 @@ class ServicioCarusel {
     this.init();
     this.updateCarrusel();
   }
-// gonza
+
   init() {
     this.botonAdelante.addEventListener('click', () => this.nextSlide());
     this.botonAtras.addEventListener('click', () => this.prevSlide());
