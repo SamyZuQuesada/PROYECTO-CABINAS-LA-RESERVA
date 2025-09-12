@@ -56,40 +56,46 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  border-radius: 12px;
 }
 
 .hero-texto {
   position: absolute;
-  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 2.5rem;
-  text-shadow: 2px 2px 8px #000;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 20px;
-  margin: 0;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 60%;
   font-family: 'Arial', sans-serif;
+  font-weight: 900;
+  z-index: 2;
 }
 
 .hero-texto h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   font-family: 'Arial', sans-serif;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-texto h2 {
-  text-shadow: #000 2px 2px 8px;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
   font-family: 'Arial', sans-serif;
 }
+
 
 header {
   position: relative;
@@ -384,7 +390,7 @@ header {
   }
 }
 
-/*FOOTER SAMY*/ 
+/* FOOTER SAMY */
 .footer {
   background: #a6af9c;
   color: #f3f3f3;
