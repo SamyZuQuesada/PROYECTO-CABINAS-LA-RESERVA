@@ -152,7 +152,6 @@ header {
 
 .superior .opciones {
   display: flex;
-
   list-style: none;
 }
 
@@ -162,8 +161,6 @@ header {
   color: white;
   transition: color 0.3s;
 }
-
-
 
 /* Sobre nosotros */
 .texto-sobre-nosotros {
@@ -179,9 +176,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-
-
-
 }
 
 .logo-navbar {
@@ -224,7 +218,6 @@ header {
 
 .logo {
   padding-left: 50px;
-
 }
 
 /*Section Brandon Servicio*/
@@ -389,9 +382,47 @@ header {
   }
 }
 
+/*Sobre Nosotros Samy*/
+.sobre-nosotros-contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  justify-content: center;
+    justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.sobre-nosotros-contenido img {
+  width: 40%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.tituloPrincipal {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.texto-sobre-nosotros {
+  height: 100%;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: #222;
+  padding: 0 8px;
+  box-sizing: border-box;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
 /* FOOTER SAMY */
 .footer {
-  background: #a6af9c;
+  background: #ade4b5;
   color: #f3f3f3;
   display: flex;
   justify-content: space-between;
@@ -416,7 +447,6 @@ header {
   flex: 1 1 220px;
   margin: 0 20px;
   min-width: 200px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
