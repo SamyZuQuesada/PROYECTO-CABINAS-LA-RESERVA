@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /*Diseño responsive*/
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   body {
     font-size: 16px;
   }
@@ -212,6 +213,7 @@ header {
   box-shadow: none;
   transform: scale(1.05);
 }
+
 .logo {
   padding-left: 50px;
 }
@@ -388,7 +390,7 @@ header {
   align-items: flex-start;
   gap: 28px;
   justify-content: center;
-    justify-content: center;
+  justify-content: center;
   max-width: 900px;
   margin: 0 auto 40px auto;
 }
@@ -398,7 +400,7 @@ header {
   height: 50%;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
   margin-top: 0;
 }
@@ -423,7 +425,7 @@ header {
 /* FOOTER SAMY */
 .footer {
   background: #ade4b5;
-  color: #f3f3f3;
+  color: #4b5343;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -581,7 +583,14 @@ header {
   font-style: normal;
 }
 
-/*carrusel paisaje*/ 
+/*carrusel paisaje*/
+.tituloPrincipal{
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-size: 2em;
+}
+
 .fotos-paisaje {
   position: relative;
   width: 100%;
@@ -615,8 +624,6 @@ header {
   object-fit: cover;
   object-position: center;
 }
-
-
 
 .btn-carrusel {
   position: absolute;
@@ -660,11 +667,6 @@ header {
   position: relative;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .texto-galeria {
   text-align: center;
   font-family: 'Arial', sans-serif;
@@ -674,28 +676,25 @@ h2 {
 
 
 /* Andrey Comentarios */
-h1 {
-  text-align: center;
-  font-style: italic;
-}
-
 .seccion {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 60px 200px 60px 200px;
-  font-style: italic;
 }
 
-.Comentario{
+.Comentario {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
+
 .titulo-comentarios {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-style: italic;
+  text-align: center;
 }
 
 .comentarios {
@@ -731,6 +730,12 @@ h1 {
   border: 2px solid #ccc;
   overflow: hidden;
   margin-bottom: 40px;
+}
+
+.tituloPrincipal{
+  text-align: center;
+  font-style: italic;
+  font-size: 2em;
 }
 
 .Mapa img {
