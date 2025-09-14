@@ -14,7 +14,7 @@
 
     <main>
 
-        <section class="Botonoes">
+        <section class="Botones">
 
         </section>
         <hr>
@@ -240,9 +240,88 @@
         </section>
 
         <hr>
-        <section class="select/dropdown">
+        <section class="select_dropdown">
+    <h2> Select / Dropdown </h2>
+    <p>
+        Los elementos &lt;select&gt; en HTML se utilizan para crear menús desplegables
+        (dropdowns). Estos permiten al usuario elegir una opción de una lista predefinida. <br>
+        Cada opción se define con la etiqueta &lt;option&gt; dentro del &lt;select&gt;.
+    </p>
 
-        </section>
+    <h3> Select básico: </h3>
+    <label for="frutas">Elige una fruta:</label>
+    <select id="frutas" name="frutas">
+        <option value="manzana">Manzana</option>
+        <option value="banana">Banana</option>
+        <option value="naranja">Naranja</option>
+        <option value="uva">Uva</option>
+    </select>
+    <p>
+        Este ejemplo muestra un menú desplegable con cuatro opciones.
+    </p>
+
+    <div class="SelectCuadro">
+        <h4> Código en HTML: </h4>
+        <p>
+            &lt;label for="frutas"&gt;Elige una fruta:&lt;/label&gt;<br>
+            &lt;select id="frutas" name="frutas"&gt;<br>
+            &nbsp;&nbsp;&lt;option value="manzana"&gt;Manzana&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="banana"&gt;Banana&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="naranja"&gt;Naranja&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="uva"&gt;Uva&lt;/option&gt;<br>
+            &lt;/select&gt;
+        </p>
+    </div>
+
+    <h3> Select con opción preseleccionada: </h3>
+    <label for="pais">Selecciona tu país:</label>
+    <select id="pais" name="pais">
+        <option value="cr">Costa Rica</option>
+        <option value="mx" selected>México</option>
+        <option value="es">España</option>
+        <option value="ar">Argentina</option>
+    </select>
+    <p>
+        La opción con el atributo <code>selected</code> aparece marcada por defecto.
+    </p>
+
+    <div class="SelectCuadro">
+        <h4> Código en HTML: </h4>
+        <p>
+            &lt;select id="pais" name="pais"&gt;<br>
+            &nbsp;&nbsp;&lt;option value="cr"&gt;Costa Rica&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="mx" selected&gt;México&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="es"&gt;España&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="ar"&gt;Argentina&lt;/option&gt;<br>
+            &lt;/select&gt;
+        </p>
+    </div>
+
+    <h3> Select con múltiples opciones: </h3>
+    <label for="colores">Selecciona colores favoritos:</label>
+    <select id="colores" name="colores" multiple size="4">
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+        <option value="amarillo">Amarillo</option>
+    </select>
+    <p>
+        Con el atributo <code>multiple</code> el usuario puede elegir más de una opción.
+    </p>
+
+    <div class="SelectCuadro">
+        <h4> Código en HTML: </h4>
+        <p>
+            &lt;select id="colores" name="colores" multiple size="4"&gt;<br>
+            &nbsp;&nbsp;&lt;option value="rojo"&gt;Rojo&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="azul"&gt;Azul&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="verde"&gt;Verde&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="amarillo"&gt;Amarillo&lt;/option&gt;<br>
+            &lt;/select&gt;
+        </p>
+    </div>
+</section>
+
         <hr>
         
         <section class="navbar">
