@@ -75,6 +75,85 @@
 
         <section class="formularios">
 
+            <section class="formularios">
+    <h2> Formularios </h2>
+    <p>
+        Los formularios en HTML se utilizan para recopilar información de los usuarios.
+        Estos permiten enviar datos como texto, correos, contraseñas u opciones seleccionadas
+        a un servidor o procesarlos en la misma página. <br>
+        <strong>Ejemplos de uso:</strong> registro de usuarios, inicio de sesión, encuestas y
+        formularios de contacto.
+    </p>
+
+    <h3>Formulario básico con estructura</h3>
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
+
+        <label for="correo">Correo electrónico:</label><br>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escriba su mensaje"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <p>
+        Este ejemplo muestra un formulario con campos básicos para ingresar nombre, correo y mensaje.
+    </p>
+
+    <div class="FormularioCuadro">
+        <h4> Código en HTML: </h4>
+        <p>
+            &lt;form&gt;<br>
+            &nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"&gt;<br><br>
+
+            &nbsp;&nbsp;&lt;label for="correo"&gt;Correo electrónico:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"&gt;<br><br>
+
+            &nbsp;&nbsp;&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;<br><br>
+
+            &nbsp;&nbsp;&lt;button type="submit"&gt;Enviar&lt;/button&gt;<br>
+            &lt;/form&gt;
+        </p>
+    </div>
+
+    <h3> Validación visual de formularios </h3>
+    <form>
+        <label for="usuario">Usuario:</label><br>
+        <input type="text" id="usuario" name="usuario" placeholder="Mínimo 4 caracteres" required minlength="4"><br><br>
+
+        <label for="email2">Correo electrónico:</label><br>
+        <input type="email" id="email2" name="email2" placeholder="ejemplo@correo.com" required><br><br>
+
+        <label for="password2">Contraseña:</label><br>
+        <input type="password" id="password2" name="password2" placeholder="Mínimo 6 caracteres" required minlength="6"><br><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+    <p>
+        En este ejemplo se aplican reglas de validación visual:<br>
+        - El campo <strong>Usuario</strong> requiere mínimo 4 caracteres.<br>
+        - El campo <strong>Correo electrónico</strong> debe tener un formato válido.<br>
+        - La <strong>Contraseña</strong> requiere al menos 6 caracteres.<br>
+        Si se intenta enviar el formulario sin cumplir los requisitos, el navegador muestra mensajes de error.
+    </p>
+
+    <div class="FormularioCuadro">
+        <h4> Código en HTML: </h4>
+        <p>
+            &lt;form&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="usuario" name="usuario" required minlength="4"&gt;<br>
+            &nbsp;&nbsp;&lt;input type="email" id="email2" name="email2" required&gt;<br>
+            &nbsp;&nbsp;&lt;input type="password" id="password2" name="password2" required minlength="6"&gt;<br>
+            &lt;/form&gt;
+        </p>
+    </div>
+</section>
+
+
         </section>
         <hr>
 
