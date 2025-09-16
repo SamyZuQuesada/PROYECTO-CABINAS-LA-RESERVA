@@ -7,10 +7,12 @@ body {
     color: #010937;
 }
 
+/* Estilo del título principal */
 h1 {
     text-align: center;
 }
 
+/*Estilo del header*/
 header {
     background-color: #010937;
     color: white;
@@ -19,9 +21,10 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin: 0;
-    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/* Estilo para el footer */
 footer {
     background-color: #010937;
     color: white;
@@ -30,10 +33,10 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin: 0;
-    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* INPUTS SAMY */
+/* Estilos de cada <section>*/
 .inputs, .checkboxes, .links, .select_dropdown , .formularios {
     background-color: white;
     padding: 30px;
@@ -44,6 +47,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos de los cuadros que contienen cada <section> */
 .InputCuadro, .CheckboxCuadro, .linkCuadro, .SelectCuadro, .FormularioCuadro {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
@@ -53,6 +57,8 @@ footer {
     margin-bottom: 25px;
 }
 
+
+/*Estados de los links*/
 
 /*Normal*/
 a{
@@ -83,13 +89,15 @@ form input, form textarea {
 }
 
 /* Validación visual */
-input:invalid, textarea:invalid {
-    border: 2px solid #d9534f; /* rojo para error */
+.formularios input:invalid, 
+.formularios textarea:invalid {
+    border: 2px solid #d9534f;
     background-color: #fbe9e9;
 }
 
-input:valid, textarea:valid {
-    border: 2px solid #5cb85c; /* verde para válido */
+.formularios input:valid, 
+.formularios textarea:valid {
+    border: 2px solid #5cb85c;
     background-color: #e9f9e9;
 }
 
