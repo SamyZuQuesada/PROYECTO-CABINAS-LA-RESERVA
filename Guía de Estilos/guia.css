@@ -79,7 +79,6 @@ a:active {
     font-weight: bold;
 } 
 
-
 form input, form textarea {
     width: 90%;
     padding: 10px;
@@ -114,4 +113,229 @@ form button:hover {
     background-color: #49708a;
 }
 
+/* Bandon guia*/
 
+
+/* ===== Navbar Brandon ===== */
+.navbar {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: var(--font);
+}
+
+.navbar h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--gris-900);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 10px;
+ 
+}
+
+.logo-navbar {
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.opciones {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.opciones li {
+  list-style: none;
+}
+
+.opciones li a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.opciones li a:hover {
+  background: rgba(0, 0, 0, 0.337);
+  transform: scale(1.05);
+}
+
+
+/*boton*/
+/* Caja contenedora para la sección */
+.radioButtons {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: var(--font);
+}
+
+.radioButtons h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--gris-900);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ===== Radio Buttons con estados ===== */
+.radio-buttons {
+  background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--font);
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--gris-200);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .18s ease;
+  background: #fff;
+  color: var(--gris-900);
+}
+
+.radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio .dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--verde-600);
+  display: grid;
+  place-items: center;
+}
+
+.radio .dot::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--verde-600);
+  transform: scale(0);
+  transition: .18s ease;
+}
+
+.radio:hover {
+  box-shadow: var(--shadow);
+}
+
+.radio:has(input:focus-visible) {
+  outline: 3px solid rgba(46,125,50,.35);
+  outline-offset: 2px;
+}
+
+.radio:has(input:checked) {
+  border-color: var(--verde-600);
+  background: #f4fbf6;
+}
+
+.radio:has(input:checked) .dot::after {
+  transform: scale(1);
+}
+
+.radio[aria-disabled="true"],
+.radio:has(input:disabled) {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* ===== Botones ===== */
+
+.Botonoes
+{
+  background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+}
+
+
+
+.btn {
+  font-family: Arial, sans-serif;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: #4CAF50; /* verde */
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #2E7D32;
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: #81C784; /* verde claro */
+  color: #000;
+}
+.btn-secondary:hover {
+  background-color: #66BB6A;
+}
+
+/* Botón terciario */
+.btn-tertiary {
+  background-color: transparent;
+  color: #2E7D32;
+  border: 2px solid #2E7D32;
+}
+.btn-tertiary:hover {
+  background-color: rgba(46,125,50,.1);
+}
