@@ -33,7 +33,7 @@ class PaisajeCarousel {
 
   updateCarrusel() {
     const translateX = -(this.currentIndex * 100);
-    this.carrusel.style.transform = `translateX(${translateX}%)`; 
+    this.carrusel.style.transform = `translateX(${translateX}%)`;
   }
 }
 
@@ -79,7 +79,7 @@ class ServicioCarusel {
   }
 
   updateCarrusel() {
-    // Mueve el elide
+    // Mueve el slide
     const translateX = -(this.currentIndex * 100);
     this.carrusel.style.transform = `translateX(${translateX}%)`;
   }

@@ -1,120 +1,179 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #ebf7f8;
-    color: #010937;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ebf7f8;
+  color: #010937;
 }
 
 /* Estilo del título principal */
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 /*Estilo del header*/
 header {
-    background-color: #010937;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+  background-color: #010937;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+/*Paleta de colores*/
+.colores {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-right: 15px;
+  border: 1px solid #ddd;
+}
+
+.color-info {
+  flex: 1;
+}
+
+.color-info h4 {
+  margin: 0 0 5px 0;
+}
+
+.color-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
 }
 
 /* Estilo para el footer */
 footer {
-    background-color: #010937;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+  background-color: #010937;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Estilos de cada <section>*/
-.inputs, .checkboxes, .links, .select_dropdown , .formularios {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.inputs,
+.checkboxes,
+.links,
+.select_dropdown,
+.formularios,
+.Botones {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos de los cuadros que contienen cada <section> */
-.InputCuadro, .CheckboxCuadro, .linkCuadro, .SelectCuadro, .FormularioCuadro {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 25px;
+.InputCuadro,
+.CheckboxCuadro,
+.linkCuadro,
+.SelectCuadro,
+.FormularioCuadro,
+.BotonesCuadro,
+.radioCuadro,
+.navbarCuadro {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
-
 
 /*Estados de los links*/
 
 /*Normal*/
-a{
-    color: #101652;
-    text-decoration: none;
-    font-size: 18px;
+a {
+  color: #101652;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 /*HOVER*/
 a:hover {
-    color: #49708a;
-    text-decoration: underline;
+  color: #49708a;
+  text-decoration: underline;
 }
 
 /*Active*/
 a:active {
-    color: #88abc2;
-    font-weight: bold;
-} 
+  color: #88abc2;
+  font-weight: bold;
+}
 
-form input, form textarea {
-    width: 90%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+form input,
+form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Validación visual */
-.formularios input:invalid, 
+.formularios input:invalid,
 .formularios textarea:invalid {
-    border: 2px solid #d9534f;
-    background-color: #fbe9e9;
+  border: 2px solid #d9534f;
+  background-color: #fbe9e9;
 }
 
-.formularios input:valid, 
+.formularios input:valid,
 .formularios textarea:valid {
-    border: 2px solid #5cb85c;
-    background-color: #e9f9e9;
+  border: 2px solid #5cb85c;
+  background-color: #e9f9e9;
 }
 
 form button {
-    background-color: #010937;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #010937;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 form button:hover {
-    background-color: #49708a;
+  background-color: #49708a;
 }
 
 /* Bandon guia*/
-
 
 /* ===== Navbar Brandon ===== */
 .navbar {
@@ -128,21 +187,20 @@ form button:hover {
   font-family: var(--font);
 }
 
-.navbar h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: var(--gris-900);
-  font-size: 1.3rem;
-  font-weight: bold;
+.navbar-demo {
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .superior {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 16px 20px;
   border-radius: 10px;
- 
+  margin: 0;
 }
 
 .logo-navbar {
@@ -179,6 +237,7 @@ form button:hover {
 
 
 /*boton*/
+
 /* Caja contenedora para la sección */
 .radioButtons {
   background-color: white;
@@ -202,13 +261,12 @@ form button:hover {
 /* ===== Radio Buttons con estados ===== */
 .radio-buttons {
   background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
@@ -264,7 +322,7 @@ form button:hover {
 }
 
 .radio:has(input:focus-visible) {
-  outline: 3px solid rgba(46,125,50,.35);
+  outline: 3px solid rgba(46, 125, 50, .35);
   outline-offset: 2px;
 }
 
@@ -285,21 +343,18 @@ form button:hover {
 
 /* ===== Botones ===== */
 
-.Botonoes
-{
+.Botonoes {
   background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 
 }
-
-
 
 .btn {
   font-family: Arial, sans-serif;
@@ -314,28 +369,31 @@ form button:hover {
 
 /* Botón primario */
 .btn-primary {
-  background-color: #4CAF50; /* verde */
+  background-color: #49708a;
   color: #fff;
 }
+
 .btn-primary:hover {
-  background-color: #2E7D32;
+  background-color: #001449;
 }
 
 /* Botón secundario */
 .btn-secondary {
-  background-color: #81C784; /* verde claro */
-  color: #000;
+  background-color: #88abc2;
+  color: #fff;
 }
+
 .btn-secondary:hover {
-  background-color: #66BB6A;
+  background-color: #02779e;
 }
 
 /* Botón terciario */
 .btn-tertiary {
   background-color: transparent;
-  color: #2E7D32;
-  border: 2px solid #2E7D32;
+  color: #010937;
+  border: 2px solid #d0e0eb;
 }
+
 .btn-tertiary:hover {
-  background-color: rgba(46,125,50,.1);
+  background-color: #ebf7f8;
 }
