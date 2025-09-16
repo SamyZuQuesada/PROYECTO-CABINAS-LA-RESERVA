@@ -32,7 +32,7 @@ class PaisajeCarousel {
   }
 
   updateCarrusel() {
-    const translateX = -(this.currentIndex * (100 / this.totalSlides));
+    const translateX = -(this.currentIndex * 100);
     this.carrusel.style.transform = `translateX(${translateX}%)`; 
   }
 }
