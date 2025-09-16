@@ -16,6 +16,67 @@
 
         <section class="Botonoes">
 
+  <section class="Botones">
+  <h2>Botones</h2>
+  <button class="btn btn-primary">Primario</button>
+  <button class="btn btn-secondary">Secundario</button>
+  <button class="btn btn-tertiary">Terciario</button>
+</section>
+
+
+  <h4>Código (HTML)</h4>
+  <pre>&lt;but ton class="btn btn--primary"&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn--secondary"&gt;Secundario&lt;/button&gt;
+&lt;button class="btn btn--outline"&gt;Tercerario&lt;/button&gt;
+
+
+  <h4>Código (CSSL)</h4>
+  <pre>
+    .btn {
+  font-family: Arial, sans-serif;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: #4CAF50; /* verde */
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #2E7D32;
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: #81C784; /* verde claro */
+  color: #000;
+}
+.btn-secondary:hover {
+  background-color: #66BB6A;
+}
+
+/* Botón terciario */
+.btn-tertiary {
+  background-color: transparent;
+  color: #2E7D32;
+  border: 2px solid #2E7D32;
+}
+.btn-tertiary:hover {
+  background-color: rgba(46,125,50,.1);
+}
+    </pre>
+    
+</>
+
+            
+
+
         </section>
         <hr>
 
@@ -137,6 +198,110 @@
 
         <section class="radio-buttons">
 
+   
+
+
+    <h2>Radio Buttons</h2>
+
+   </>
+    <p>Los botones de opción (radio buttons) permiten a los usuarios seleccionar una opción de un conjunto mutuamente exclusivo. Solo se puede seleccionar una opción a la vez dentro del mismo grupo.</p>
+  <div class="radio-group">
+    
+    <label class="radio">
+      <input type="radio" name="opcion" checked>
+      <span class="dot"></span>
+      <span>Opción 1</span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" name="opcion">
+      <span class="dot"></span>
+      <span>Opción 2</span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" name="opcion">
+      <span class="dot"></span>
+      <span>Opción 3</span>
+    </label>
+
+  </div>
+
+
+
+
+
+  <h4>Código (HTML)</h4>
+  <pre>&lt;label class="radio"&gt;
+  &lt;input type="radio" name="tipo" value="estandar" checked&gt;
+  &lt;span class="check"&gt;&lt;/span&gt;
+  &lt;span&gt;Estandar&lt;/span&gt;
+&lt;/label&gt;</pre>
+
+    <h4>Código (CSS)</h4>
+    <pre>.radio-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s ease;
+  background: #fff;
+  color: #333;
+}
+
+.radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #2E7D32;
+  display: grid;
+  place-items: center;
+}
+
+.radio .dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2E7D32;
+  transform: scale(0);
+  transition: .2s ease;
+}
+
+.radio:hover { box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+.radio input:checked + .dot::after { transform: scale(1); }
+.radio input:checked ~ span { font-weight: bold; }
+.radio input:disabled + .dot { opacity: .5; }
+    </pre>
+
+
+
+
+</div>
+ 
+
+
+ </section>
+
+
         </section>
         <hr>
 
@@ -246,6 +411,117 @@
         <hr>
         
         <section class="navbar">
+  <h1>
+            Navbar 
+           
+        
+        </h1>
+
+        <p>     
+            Ejemplo de Barra de Navegación (Navbar)
+            Este nav tinene un logo a la izquierda y un menú de opciones a la derecha.
+          tiene un fondo semitransparente y un efecto de sombra para destacarse sobre el contenido.
+        
+        
+        </p>
+
+
+      <header class="superior"><br>
+      
+            <div class="logo">
+
+              <h1>LOGO</h1>
+            </div>
+            <nav class="menu">
+                <ul class="opciones">
+                    <li><a href="#instalaciones">Instalaciones</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <h1>Codigo-html</h1>
+     
+    <pre>
+&lt;header class="superior"&gt;
+    &lt;div class="logo"&gt;
+        &lt;h1&gt;LOGO&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;nav class="menu"&gt;
+        &lt;ul class="opciones"&gt;
+            &lt;li&gt;&lt;a href="#instalaciones"&gt;Instalaciones&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#sobre-nosotros"&gt;Sobre Nosotros&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#ubicacion"&gt;Ubicación&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+</pre>
+
+
+
+ 
+
+
+         <h1>Codig-css</h1>
+
+    <pre>
+.superior { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.logo-navbar {
+  white-space: nowrap;
+}
+
+.opciones {
+  display: flex;
+  gap: 1rem;
+}
+
+.opciones li {
+  list-style: none;
+  font-size: 5px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.opciones li a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  -webkit-box-reflect: below 10px;
+}
+
+.opciones li a:hover {
+  background: #dfeaa6a9;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+
+.logo {
+  padding-left: 50px;
+}
+
+.logo {
+  padding-left: 50px;
+}
+</pre>
 
         </section>
 
