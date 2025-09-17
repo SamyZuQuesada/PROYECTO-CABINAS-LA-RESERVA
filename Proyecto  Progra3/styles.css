@@ -751,7 +751,7 @@ header {
   height: 400px;
   overflow: hidden;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .tituloPrincipal {
