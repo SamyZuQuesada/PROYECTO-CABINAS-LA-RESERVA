@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/*Diseño responsive*/
+/* Diseño responsive */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
@@ -222,7 +222,7 @@ header {
   padding-left: 50px;
 }
 
-/*Section Brandon Servicio*/
+/* Section Brandon Servicio */
 .servicios {
   width: min(100%, 1100px);
   margin: auto;
@@ -384,7 +384,7 @@ header {
   }
 }
 
-/*Sobre Nosotros Samy*/
+/* Sobre Nosotros Samy */
 .sobre-nosotros-contenido {
   display: flex;
   align-items: flex-start;
@@ -537,6 +537,11 @@ header {
   font-style: normal;
 }
 
+.texto-footer {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+}
+
 /* Instalaciones Samy */
 .tituloPrincipal {
   text-align: center;
@@ -583,7 +588,7 @@ header {
   font-style: normal;
 }
 
-/*carrusel paisaje*/
+/* carrusel paisaje */
 .tituloPrincipal{
   text-align: center;
   margin-bottom: 20px;
@@ -607,14 +612,13 @@ header {
   top: 0;
   left: 0;
   display: flex;
-  width: 400%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
   margin-bottom: 45px;
 }
 
 .slide_paisaje {
-  width: 25%;
+  flex: 0 0 100%;
   height: 100%;
 }
 
@@ -676,7 +680,7 @@ header {
 
 
 /* Andrey Comentarios */
-.seccion {
+.comentariosContenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -692,7 +696,8 @@ header {
 .titulo-comentarios {
   font-size: 2em;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+   margin: 40px 0 15px 0;
   font-style: italic;
   text-align: center;
 }
@@ -724,16 +729,148 @@ header {
 }
 
 /* Ubicacion */
-.Mapa {
+.ubicacion {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  height: auto;
 }
+
+.tituloPrincipal{
+  text-align: center;
+  font-style: italic;
+  font-size: 2em;
+}
+
 iframe {
-  width: 100%;
-  height:  600px;
   border: none;
-  margin-top: 20px;
-  
+  width: 100%;
+  height: 400px;
+}
+
+/* =========================
+   RESPONSIVE SOLO EN MÓVIL
+   (no altera tu desktop)
+   ========================= */
+
+/* Tablets y abajo */
+@media (max-width: 900px) {
+
+  /* Evitar desbordes horizontales */
+  img, video, iframe { max-width: 100%; height: auto; display:block; }
+
+  /* Contenedor con respiración lateral */
+  .contenedor { padding-inline: 16px; }
+
+  /* NAVBAR */
+  .superior {
+    padding: 12px 16px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .opciones {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .opciones li { font-size: 14px; padding: 6px 10px; }
+  .opciones li a { font-size: 14px; padding: 8px 10px; }
+
+  /* HERO */
+  .hero-section {
+    height: 75vh;
+    min-height: 420px;
+    margin-bottom: 24px;
+  }
+  .hero-texto {
+    width: 92%;
+    padding: 16px;
+  }
+  .hero-texto h1 { font-size: 2rem; }
+  .hero-texto h2 { font-size: 1.125rem; }
+
+  /* SERVICIOS (carrusel) */
+  .servicios { padding: 12px 16px; }
+  .fotos-Servicios { margin: 0 auto 24px; }
+  .slide_Servicio { height: 48vh; }
+  .overlayServicio { padding: 12px; }
+  .overlayServicio h3 { font-size: 1.1rem; }
+  .overlayServicio ul { font-size: 0.95rem; }
+
+  /* SOBRE NOSOTROS */
+  .sobre-nosotros-contenido {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-inline: 16px;
+  }
+  .sobre-nosotros-contenido img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .texto-sobre-nosotros { font-size: 1rem; padding: 0; }
+
+  /* CABINAS / TARJETAS */
+  .ContenedorCabinas { padding: 16px; white-space: normal; }
+  .cabinasEstilo { flex-wrap: wrap; gap: 16px; }
+  .cabina { flex: 1 1 280px; max-width: 360px; margin-inline: auto; }
+  .cabinasEstilo img { height: 200px; }
+
+  /* CARRUSEL PAISAJE */
+  .fotos-paisaje {
+    height: 44vh;
+    margin: 28px auto;
+  }
+
+  /* COMENTARIOS (grid fluido) */
+  .comentariosContenedor {
+    padding: 24px 16px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  /* UBICACIÓN / MAPA */
+  .Mapa { height: 45vh; margin-bottom: 24px; }
+  .Mapa img { height: 45vh; }
+
+  /* FOOTER */
+  .footer {
+    padding: 24px 16px 12px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section { width: 100%; }
+  .footer-logo { width: 72px; height: 72px; }
+
+  /* TÍTULOS */
+  .tituloPrincipal { margin-bottom: 16px; font-size: 1.4rem; }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 600px) {
+
+  /* Botones de carrusel más compactos */
+  .btn-carrusel {
+    width: 44px; height: 44px; font-size: 1.4rem;
+  }
+
+  /* Hero aún más compacto si hace falta */
+  .hero-section { min-height: 380px; }
+  .hero-texto h1 { font-size: 1.8rem; }
+  .hero-texto h2 { font-size: 1rem; }
+
+  /* Ajustes finos de tarjetas e imágenes */
+  .cabinasEstilo img { height: 180px; }
+
+  /* Tipografía del footer */
+  .footer-section h2 { font-size: 1.1rem; }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 380px) {
+  .opciones li, .opciones li a { font-size: 13px; padding: 6px 8px; }
+  .hero-texto { padding: 12px; }  
 }
