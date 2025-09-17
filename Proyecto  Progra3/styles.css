@@ -751,6 +751,9 @@ header {
   height: 400px;
   overflow: hidden;
   height: auto;
+}
+
+main .ubicacion {
   margin-bottom: 40px;
 }
 
