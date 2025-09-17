@@ -103,7 +103,6 @@ header {
   left: 0;
   width: 100%;
   z-index: 10;
-  /* padding: 20px 0; */
 }
 
 
@@ -228,6 +227,7 @@ header {
   margin: auto;
   padding: 12px;
   font-style: italic;
+  margin-bottom: 40px;
 }
 
 .texto-galeria {
@@ -386,15 +386,16 @@ header {
 
 /* Sobre Nosotros Samy */
 
-.sobre-nosotros
-{
+.sobre-nosotros {
 
   width: min(100%);
   height: 700px;
   margin: auto;
   padding: 20px;
- 
+  margin-bottom: 40px;
+
 }
+
 .sobre-nosotros-contenido {
   display: flex;
   align-items: flex-start;
@@ -407,7 +408,8 @@ header {
 }
 
 .sobre-nosotros-contenido img {
-  width: 40%;;
+  width: 40%;
+  ;
   height: 40%;
   object-fit: cover;
   border-radius: 12px;
@@ -419,7 +421,7 @@ header {
 .tituloPrincipal {
   text-align: center;
   margin-bottom: 20px;
-  
+
 }
 
 .texto-sobre-nosotros {
@@ -505,7 +507,7 @@ header {
 .footer-icons-vertical {
   display: flex;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .icon {
@@ -547,23 +549,18 @@ header {
 .texto-footer {
   font-family: 'Arial', sans-serif;
   font-style: normal;
-}
-
-.texto-footer {
-  font-family: 'Arial', sans-serif;
-  font-style: normal;
+  margin-bottom: 10px;
 }
 
 /* Instalaciones Samy */
 
-.instalaciones
-{
- 
-  width: min(100%);
-  height :   600px;
-  margin: auto;
-  padding: 50px;
+.instalaciones {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
 .tituloPrincipal {
   text-align: center;
   margin-bottom: 40px;
@@ -571,72 +568,76 @@ header {
 
 .ContenedorCabinas {
   padding: 20px;
-  white-space: nowrap;
+  white-space: normal;
   margin-bottom: 40px;
 }
 
 .cabinasEstilo {
   display: flex;
-  gap: 100px;
+  flex-wrap: nowrap;
+  gap: 20px;
   justify-content: center;
-  height: 100%;
 }
 
 .cabina {
-  flex: 0 0 300px;
+  flex: 1;
+  min-width: 350px;
+  max-width: 450px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding-bottom: 15px;
-  font-style: italic;
+  padding: 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .cabinasEstilo img {
-  width: 300px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .cabinasEstilo p {
-  margin-top: 8px;
-  font-size: 16px;
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-.texto {
+.cabina p {
   font-family: 'Arial', sans-serif;
-  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #444;
 }
 
 /* carrusel paisaje */
-.tituloPrincipal{
+.tituloPrincipal {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   font-style: italic;
   font-size: 2em;
+  background: transparent;
 }
 
-.fotos-paisaje {
+.galeriaDeFotos {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  height: 500px;
   margin: 50px auto;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 80px;
 }
 
 .carrusel-paisaje {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   display: flex;
-  height: 100%;
+  height: 500px;
   transition: transform 0.5s ease-in-out;
-  margin-bottom: 45px;
 }
 
 .slide_paisaje {
@@ -649,6 +650,7 @@ header {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 15px;
 }
 
 .btn-carrusel {
@@ -697,7 +699,9 @@ header {
   text-align: center;
   font-family: 'Arial', sans-serif;
   font-style: normal;
-  margin-bottom: 20px;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  background: transparent;
 }
 
 
@@ -713,15 +717,6 @@ header {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-}
-
-.titulo-comentarios {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-   margin: 40px 0 15px 0;
-  font-style: italic;
-  text-align: center;
 }
 
 .comentarios {
@@ -755,11 +750,11 @@ header {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  margin-bottom: 0;
   height: auto;
+  margin-bottom: 40px;
 }
 
-.tituloPrincipal{
+.tituloPrincipal {
   text-align: center;
   font-style: italic;
   font-size: 2em;
@@ -780,10 +775,18 @@ iframe {
 @media (max-width: 900px) {
 
   /* Evitar desbordes horizontales */
-  img, video, iframe { max-width: 100%; height: auto; display:block; }
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
   /* Contenedor con respiración lateral */
-  .contenedor { padding-inline: 16px; }
+  .contenedor {
+    padding-inline: 16px;
+  }
 
   /* NAVBAR */
   .superior {
@@ -791,13 +794,22 @@ iframe {
     gap: 8px;
     flex-wrap: wrap;
   }
+
   .opciones {
     gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .opciones li { font-size: 14px; padding: 6px 10px; }
-  .opciones li a { font-size: 14px; padding: 8px 10px; }
+
+  .opciones li {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .opciones li a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 
   /* HERO */
   .hero-section {
@@ -805,20 +817,44 @@ iframe {
     min-height: 420px;
     margin-bottom: 24px;
   }
+
   .hero-texto {
     width: 92%;
     padding: 16px;
   }
-  .hero-texto h1 { font-size: 2rem; }
-  .hero-texto h2 { font-size: 1.125rem; }
+
+  .hero-texto h1 {
+    font-size: 2rem;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.125rem;
+  }
 
   /* SERVICIOS (carrusel) */
-  .servicios { padding: 12px 16px; }
-  .fotos-Servicios { margin: 0 auto 24px; }
-  .slide_Servicio { height: 48vh; }
-  .overlayServicio { padding: 12px; }
-  .overlayServicio h3 { font-size: 1.1rem; }
-  .overlayServicio ul { font-size: 0.95rem; }
+  .servicios {
+    padding: 12px 16px;
+  }
+
+  .fotos-Servicios {
+    margin: 0 auto 24px;
+  }
+
+  .slide_Servicio {
+    height: 48vh;
+  }
+
+  .overlayServicio {
+    padding: 12px;
+  }
+
+  .overlayServicio h3 {
+    font-size: 1.1rem;
+  }
+
+  .overlayServicio ul {
+    font-size: 0.95rem;
+  }
 
   /* SOBRE NOSOTROS */
   .sobre-nosotros-contenido {
@@ -827,18 +863,38 @@ iframe {
     gap: 16px;
     padding-inline: 16px;
   }
+
   .sobre-nosotros-contenido img {
     width: 100%;
     height: auto;
     margin: 0;
   }
-  .texto-sobre-nosotros { font-size: 1rem; padding: 0; }
+
+  .texto-sobre-nosotros {
+    font-size: 1rem;
+    padding: 0;
+  }
 
   /* CABINAS / TARJETAS */
-  .ContenedorCabinas { padding: 16px; white-space: normal; }
-  .cabinasEstilo { flex-wrap: wrap; gap: 16px; }
-  .cabina { flex: 1 1 280px; max-width: 360px; margin-inline: auto; }
-  .cabinasEstilo img { height: 200px; }
+  .ContenedorCabinas {
+    padding: 16px;
+    white-space: normal;
+  }
+
+  .cabinasEstilo {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .cabina {
+    flex: 1 1 280px;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .cabinasEstilo img {
+    height: 200px;
+  }
 
   /* CARRUSEL PAISAJE */
   .fotos-paisaje {
@@ -854,8 +910,14 @@ iframe {
   }
 
   /* UBICACIÓN / MAPA */
-  .Mapa { height: 45vh; margin-bottom: 24px; }
-  .Mapa img { height: 45vh; }
+  .Mapa {
+    height: 45vh;
+    margin-bottom: 24px;
+  }
+
+  .Mapa img {
+    height: 45vh;
+  }
 
   /* FOOTER */
   .footer {
@@ -864,11 +926,21 @@ iframe {
     flex-direction: column;
     align-items: center;
   }
-  .footer-section { width: 100%; }
-  .footer-logo { width: 72px; height: 72px; }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 72px;
+    height: 72px;
+  }
 
   /* TÍTULOS */
-  .tituloPrincipal { margin-bottom: 16px; font-size: 1.4rem; }
+  .tituloPrincipal {
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+  }
 }
 
 /* Teléfonos pequeños */
@@ -876,23 +948,45 @@ iframe {
 
   /* Botones de carrusel más compactos */
   .btn-carrusel {
-    width: 44px; height: 44px; font-size: 1.4rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
   }
 
   /* Hero aún más compacto si hace falta */
-  .hero-section { min-height: 380px; }
-  .hero-texto h1 { font-size: 1.8rem; }
-  .hero-texto h2 { font-size: 1rem; }
+  .hero-section {
+    min-height: 380px;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-texto h2 {
+    font-size: 1rem;
+  }
 
   /* Ajustes finos de tarjetas e imágenes */
-  .cabinasEstilo img { height: 180px; }
+  .cabinasEstilo img {
+    height: 180px;
+  }
 
   /* Tipografía del footer */
-  .footer-section h2 { font-size: 1.1rem; }
+  .footer-section h2 {
+    font-size: 1.1rem;
+  }
 }
 
 /* Móviles muy pequeños */
 @media (max-width: 380px) {
-  .opciones li, .opciones li a { font-size: 13px; padding: 6px 8px; }
-  .hero-texto { padding: 12px; }  
+
+  .opciones li,
+  .opciones li a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .hero-texto {
+    padding: 12px;
+  }
 }
