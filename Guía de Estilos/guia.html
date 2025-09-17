@@ -314,7 +314,117 @@
         <hr>
 
         <section class="labels">
+            <h2>Labels (etiquetas)</h2>
+            <p>
+                La etiqueta "label" se usa para asociar un campo de entrada con los elementos de un formulario, como inputs, checkboxes o botones. Cuando un usuario hace clic en el texto de un "label", el navegador enfoca el campo de formulario asociado.
+            </p>
+            <p>
+                Label está relacionada al elemento del formulario por medio del atributo "for" que debe coincidir con el id del elemento.
+            </p>
 
+            <div class="nota">
+                <p><strong>Nota:</strong> El uso correcto de labels mejora significativamente la accesibilidad y usabilidad de los formularios.</p>
+            </div>
+
+            <h3>Label Básico</h3>
+            <div>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <p>Los labels básicos mejoran la accesibilidad y usabilidad de los formularios.</p>
+            <div class="labels-cuadro">
+                <h4>Código en HTML:</h4>
+                <pre>&lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"&gt;</pre>
+            </div>
+
+            <h3>Label con campo requerido</h3>
+            <div>
+                <label for="email" class="requerido">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <p>Los labels pueden indicar visualmente cuando un campo es obligatorio.</p>
+            <div class="labels-cuadro">
+                <h4>Código en HTML:</h4>
+                <pre>&lt;label for="email" class="requerido"&gt;Correo electrónico:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;</pre>
+                <h4>Código en CSS:</h4>
+                <pre>.requerido::after {
+    content: " *";
+    color: #e53e3e;
+}</pre>
+            </div>
+
+            <h3>Label con checkbox</h3>
+            <div>
+                <label for="terminos">
+                    <input type="checkbox" id="terminos" name="terminos">
+                    Acepto los términos y condiciones
+                </label>
+            </div>
+            <p>Los labels hacen que los checkboxes y radio buttons sean más fáciles de seleccionar.</p>
+            <div class="labels-cuadro">
+                <h4>Código en HTML:</h4>
+                <pre>&lt;label for="terminos"&gt;
+    &lt;input type="checkbox" id="terminos" name="terminos"&gt;
+    Acepto los términos y condiciones
+&lt;/label&gt;</pre>
+            </div>
+
+            <h3>Estados de labels</h3>
+            <div class="estados-labels">
+                <div>
+                    <h4>Normal</h4>
+                    <label for="normal">Label en estado normal</label>
+                    <input type="text" id="normal" placeholder="Campo normal">
+                </div>
+                
+                <div>
+                    <h4>Hover</h4>
+                    <label for="hover" style="color: #4299e1; cursor: pointer;">Label en estado hover</label>
+                    <input type="text" id="hover" placeholder="Pasa el cursor encima">
+                </div>
+                
+                <div>
+                    <h4>Enfocado</h4>
+                    <label for="focus">Label con campo enfocado</label>
+                    <input type="text" id="focus" placeholder="Campo enfocado" style="border-color: #3182ce; box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);">
+                </div>
+            </div>
+            
+            <div class="labels-cuadro">
+                <h4>Código en CSS para estados:</h4>
+                <pre>/*Estado normal*/
+label {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/*estado hover*/
+label:hover {
+    color: #4299e1;
+    cursor: pointer;
+}
+
+/*cuando el campo asociado esta enfocado*/
+input:focus + label,
+textarea:focus + label {
+    color: #3182ce;
+    font-weight: bold;
+}</pre>
+            </div>
+
+            <h3>Label con Text-area</h3>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+            <p>Los labels también pueden asociarse con elementos text-area para áreas de texto más largos.</p>
+            <div class="labels-cuadro">
+                <h4>Código en HTML:</h4>
+                <pre>&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+&lt;textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"&gt;&lt;/textarea&gt;</pre>
+            </div>
         </section>
         <hr>
 
