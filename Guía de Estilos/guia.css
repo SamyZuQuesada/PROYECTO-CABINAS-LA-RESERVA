@@ -177,6 +177,37 @@ form button:hover {
   background-color: #49708a;
 }
 
+/* Estilos de Labels */
+.label-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0a4b75;
+}
+
+.label-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e6495;
+}
+
+.label-small-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #5191c1;
+}
+
+.label-text {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #2b879e;
+}
+
+.label-info {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #013750;
+}
+
 /* Bandon guia*/
 
 /* ===== Navbar Brandon ===== */
