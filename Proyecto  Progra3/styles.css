@@ -754,6 +754,10 @@ header {
   margin-bottom: 0;
 }
 
+main .ubicacion {
+  margin-bottom: 40px;
+}
+
 .tituloPrincipal {
   text-align: center;
   font-style: italic;
