@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1> ¡Guía de Estilos Personalizadas! </h1>
+        <h1 class="titulo"> ¡Guía de Estilos Personalizadas! </h1>
     </header>
 
     <section class="colores">
@@ -92,8 +92,7 @@
             </div>
         </div>
     </section>
-    <hr>
-    
+
     <main>
 
         <section class="Botones">
@@ -103,21 +102,31 @@
                 Se utilizan para iniciar acciones, enviar formularios o navegar entre páginas. <br>
                 <strong>En esta guía de estilos te mostramos los 3 tipos principales:</strong><br>
             </p>
-            <button class="btn btn-primary">Primario</button>
-            <p>
-                Este es un botón primario.<br>
-                Usado para acciones principales/importantes.<br>
-            </p>
-            <button class="btn btn-secondary">Secundario</button>
-            <p>
-                Este es un botón secundario.<br>
-                Usado para acciones secundarias/alternativas.<br>
-            </p>
-            <button class="btn btn-tertiary">Terciario</button>
-            <p>
-                Este es un botón terciario.<br>
-                Usado para acciones menos importantes.<br>
-            </p>
+            <ol type="1">
+                <li>
+                    <p>
+                        <strong>Este es un botón primario.</strong><br>
+                        Usado para acciones principales/importantes.<br>
+                    </p>
+                </li>
+                <button class="btn btn-primary">Primario</button>
+
+                <li>
+                    <p>
+                        <strong>Este es un botón secundario.</strong><br>
+                        Usado para acciones secundarias/alternativas.<br>
+                    </p>
+                </li>
+                <button class="btn btn-secondary">Secundario</button>
+
+                <li>
+                    <p>
+                        <strong>Este es un botón terciario.</strong><br>
+                        Usado para acciones menos importantes.<br>
+                    </p>
+                </li>
+                <button class="btn btn-tertiary">Terciario</button>
+            </ol>
 
             <div class="BotonesCuadro">
                 <h4>Código (HTML)</h4>
@@ -173,7 +182,6 @@
                 </pre>
             </div>
         </section>
-        <hr>
 
         <section class="inputs">
             <h2> Inputs </h2>
@@ -184,50 +192,61 @@
                 correos electrónicos, etc. <br> <strong>Ejemplos de uso:</strong>
             </p>
 
-            <h3> Input de Texto :</h3>
-            <input type="text" id="text" name="text" placeholder="Ingrese su texto aquí">
-            <p>Los elementos &lt;input&gt; de tipo text crean campos de texto básicos de una sola línea.</p>
-            <div class="InputCuadro">
-                <h4> Código en HTML: </h4>
-                <p>
-                    &lt;input type="text" id="text" name="text" placeholder="Ingrese su texto aquí"&gt;
-                </p>
-            </div>
+            <ol type="1">
+                <li>
+                    <h3> Input de Texto :</h3>
+                </li>
+                <input type="text" id="text" name="text" placeholder="Ingrese su texto aquí">
+                <p>Los elementos &lt;input&gt; de tipo text crean campos de texto básicos de una sola línea.</p>
+                <div class="InputCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;input type="text" id="text" name="text" placeholder="Ingrese su texto aquí"&gt;
+                    </p>
+                </div>
 
-            <h3> Input de Email :</h3>
-            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" size="30">
-            <p>Los elementos &lt;input&gt; de tipo email crean campos para ingresar direcciones de correo electrónico.
-            </p>
-            <div class="InputCuadro">
-                <h4> Código en HTML: </h4>
-                <p>
-                    &lt;input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"&gt;
+                <li>
+                    <h3> Input de Email :</h3>
+                </li>
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" size="30">
+                <p>Los elementos &lt;input&gt; de tipo email crean campos para ingresar direcciones de correo
+                    electrónico.
                 </p>
-            </div>
+                <div class="InputCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"&gt;
+                    </p>
+                </div>
 
-            <h3> Input de Password :</h3>
-            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
-            <p>Los elementos &lt;input&gt; de tipo password crean campos para ingresar contraseñas de forma oculta.</p>
-            <div class="InputCuadro">
-                <h4> Código en HTML: </h4>
-                <p>
-                    &lt;input type="password" id="password" name="password" placeholder="Ingrese su contraseña"&gt;
+                <li>
+                    <h3> Input de Password :</h3>
+                </li>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+                <p>Los elementos &lt;input&gt; de tipo password crean campos para ingresar contraseñas de forma oculta.
                 </p>
-            </div>
+                <div class="InputCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;input type="password" id="password" name="password" placeholder="Ingrese su contraseña"&gt;
+                    </p>
+                </div>
 
-            <h3> Input de Textarea :</h3>
-            <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Ingrese su texto aquí"></textarea>
-            <p>Los elementos &lt;textarea&gt; se utilizan para crear campos de texto de varias líneas.</p>
-            <div class="InputCuadro">
-                <h4> Código en HTML: </h4>
-                <p>
-                    &lt;textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Ingrese su texto
-                    aquí"&gt;&lt;/textarea&gt;
-                </p>
-            </div>
-
+                <li>
+                    <h3> Input de Textarea :</h3>
+                </li>
+                <textarea id="textarea" name="textarea" rows="4" cols="50"
+                    placeholder="Ingrese su texto aquí"></textarea>
+                <p>Los elementos &lt;textarea&gt; se utilizan para crear campos de texto de varias líneas.</p>
+                <div class="InputCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Ingrese su texto
+                        aquí"&gt;&lt;/textarea&gt;
+                    </p>
+                </div>
+            </ol>
         </section>
-        <hr>
 
         <section class="formularios">
             <h2> Formularios </h2>
@@ -239,194 +258,199 @@
                 formularios de contacto.
             </p>
 
-            <h3>Formulario básico con estructura</h3>
-            <form>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
+            <ol type="1">
+                <li>
+                    <h3>Formulario básico con estructura:</h3>
+                </li>
+                <form>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
 
-                <label for="correo">Correo electrónico:</label><br>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"><br><br>
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"><br><br>
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="40"
-                    placeholder="Escriba su mensaje"></textarea><br><br>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="40"
+                        placeholder="Escriba su mensaje"></textarea><br><br>
 
-                <button type="submit">Enviar</button>
-            </form>
-            <p>
-                Este ejemplo muestra un formulario con campos básicos para ingresar nombre, correo y mensaje.
-            </p>
-
-            <div class="FormularioCuadro">
-                <h4> Código en HTML: </h4>
+                    <button type="submit">Enviar</button>
+                </form>
                 <p>
-                    &lt;form&gt;<br>
-                    &nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
-                    &nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre" placeholder="Ingrese su
-                    nombre"&gt;<br><br>
-
-                    &nbsp;&nbsp;&lt;label for="correo"&gt;Correo electrónico:&lt;/label&gt;<br>
-                    &nbsp;&nbsp;&lt;input type="email" id="correo" name="correo"
-                    placeholder="ejemplo@correo.com"&gt;<br><br>
-
-                    &nbsp;&nbsp;&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;<br>
-                    &nbsp;&nbsp;&lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;<br><br>
-
-                    &nbsp;&nbsp;&lt;button type="submit"&gt;Enviar&lt;/button&gt;<br>
-                    &lt;/form&gt;
+                    Este ejemplo muestra un formulario con campos básicos para ingresar nombre, correo y mensaje.
                 </p>
-            </div>
 
-            <h3> Validación visual de formularios </h3>
-            <form>
-                <label for="usuario">Usuario:</label><br>
-                <input type="text" id="usuario" name="usuario" placeholder="Mínimo 4 caracteres" required
-                    minlength="4"><br><br>
+                <div class="FormularioCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;form&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre" placeholder="Ingrese su
+                        nombre"&gt;<br><br>
 
-                <label for="email2">Correo electrónico:</label><br>
-                <input type="email" id="email2" name="email2" placeholder="ejemplo@correo.com" required><br><br>
+                        &nbsp;&nbsp;&lt;label for="correo"&gt;Correo electrónico:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="email" id="correo" name="correo"
+                        placeholder="ejemplo@correo.com"&gt;<br><br>
 
-                <label for="password2">Contraseña:</label><br>
-                <input type="password" id="password2" name="password2" placeholder="Mínimo 6 caracteres" required
-                    minlength="6"><br><br>
+                        &nbsp;&nbsp;&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;<br><br>
 
-                <button type="submit">Registrar</button>
-            </form>
-            <p>
-                En este ejemplo se aplican reglas de validación visual:<br>
-                - El campo <strong>Usuario</strong> requiere mínimo 4 caracteres.<br>
-                - El campo <strong>Correo electrónico</strong> debe tener un formato válido.<br>
-                - La <strong>Contraseña</strong> requiere al menos 6 caracteres.<br>
-                Si se intenta enviar el formulario sin cumplir los requisitos, el navegador muestra mensajes de error.
-            </p>
+                        &nbsp;&nbsp;&lt;button type="submit"&gt;Enviar&lt;/button&gt;<br>
+                        &lt;/form&gt;
+                    </p>
+                </div>
 
-            <div class="FormularioCuadro">
-                <h4> Código en HTML: </h4>
+                <li>
+                    <h3> Validación visual de formularios: </h3>
+                </li>
+                <form>
+                    <label for="usuario">Usuario:</label><br>
+                    <input type="text" id="usuario" name="usuario" placeholder="Mínimo 4 caracteres" required
+                        minlength="4"><br><br>
+
+                    <label for="email2">Correo electrónico:</label><br>
+                    <input type="email" id="email2" name="email2" placeholder="ejemplo@correo.com" required><br><br>
+
+                    <label for="password2">Contraseña:</label><br>
+                    <input type="password" id="password2" name="password2" placeholder="Mínimo 6 caracteres" required
+                        minlength="6"><br><br>
+
+                    <button type="submit">Registrar</button>
+                </form>
                 <p>
-                    &lt;form&gt;<br>
-                    &nbsp;&nbsp;&lt;input type="text" id="usuario" name="usuario" required minlength="4"&gt;<br>
-                    &nbsp;&nbsp;&lt;input type="email" id="email2" name="email2" required&gt;<br>
-                    &nbsp;&nbsp;&lt;input type="password" id="password2" name="password2" required minlength="6"&gt;<br>
-                    &lt;/form&gt;
+                    En este ejemplo se aplican reglas de validación visual:<br>
+                    - El campo <strong>Usuario</strong> requiere mínimo 4 caracteres.<br>
+                    - El campo <strong>Correo electrónico</strong> debe tener un formato válido.<br>
+                    - La <strong>Contraseña</strong> requiere al menos 6 caracteres.<br>
+                    Si se intenta enviar el formulario sin cumplir los requisitos, el navegador muestra mensajes de
+                    error.
                 </p>
-            </div>
+
+                <div class="FormularioCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;form&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="usuario" name="usuario" required minlength="4"&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="email" id="email2" name="email2" required&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="password" id="password2" name="password2" required
+                        minlength="6"&gt;<br>
+                        &lt;/form&gt;
+                    </p>
+                </div>
+            </ol>
         </section>
-        <hr>
 
         <section class="labels">
-            <h2>Labels (etiquetas)</h2>
+            <h2> Labels (Etiquetas de texto) </h2>
             <p>
-                La etiqueta "label" se usa para asociar un campo de entrada con los elementos de un formulario, como inputs, checkboxes o botones. Cuando un usuario hace clic en el texto de un "label", el navegador enfoca el campo de formulario asociado.
+                Los labels o etiquetas de texto con diferentes estilos y tamaños son fundamentales en el diseño porque
+                permiten<br>
+                establecer una jerarquía visual clara dentro de la interfaz. <br>
+                <strong>Al utilizarlos correctamente se logra:</strong>
+            <ol start="1">
+                <li>
+                    Organización del contenido: Los títulos, subtítulos y textos informativos ayudan a estructurar la
+                    información de manera ordenada,<br>
+                    permitiendo al usuario identificar lo más importante y lo secundario.<br>
+                </li>
+                <li>
+                    Consistencia en el diseño: Definir estilos específicos evita que cada página use tamaños o colores
+                    <br>
+                    distintos, manteniendo una identidad visual coherente en todo el proyecto.<br>
+                </li>
+                <li>
+                    Mejor legibilidad y experiencia de usuario: Los diferentes tamaños y pesos tipográficos guían la
+                    lectura <br>
+                    de forma natural, haciendo que la información sea más fácil de comprender.<br>
+                </li>
+                <li>
+                    Semántica y accesibilidad: Al emplear etiquetas HTML como &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt; y
+                    &lt;p&gt;, se mejora la<br>
+                    interpretación de la página tanto para los usuarios como para los buscadores, beneficiando la
+                    accesibilidad y el SEO. <br>
+                </li>
+            </ol>
             </p>
-            <p>
-                Label está relacionada al elemento del formulario por medio del atributo "for" que debe coincidir con el id del elemento.
-            </p>
 
-            <div class="nota">
-                <p><strong>Nota:</strong> El uso correcto de labels mejora significativamente la accesibilidad y usabilidad de los formularios.</p>
-            </div>
+            <ol type="a">
+                <li>
+                    <h3>Título Principal:</h3>
+                </li>
+                <h1 class="label-title">Título Principal (H1)</h1>
+                <p>
+                    <strong>Uso:</strong> Se utiliza una sola vez por página para indicar el tema principal o el
+                    encabezado
+                    más
+                    importante.<br>
 
-            <h3>Label Básico</h3>
-            <div>
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
-            </div>
-            <p>Los labels básicos mejoran la accesibilidad y usabilidad de los formularios.</p>
-            <div class="labels-cuadro">
-                <h4>Código en HTML:</h4>
-                <pre>&lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
-&lt;input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"&gt;</pre>
-            </div>
+                    <strong>Características:</strong> Fuente más grande, en negrita y llamativa. <br>
 
-            <h3>Label con campo requerido</h3>
-            <div>
-                <label for="email" class="requerido">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <p>Los labels pueden indicar visualmente cuando un campo es obligatorio.</p>
-            <div class="labels-cuadro">
-                <h4>Código en HTML:</h4>
-                <pre>&lt;label for="email" class="requerido"&gt;Correo electrónico:&lt;/label&gt;
-&lt;input type="email" id="email" name="email" required&gt;</pre>
-                <h4>Código en CSS:</h4>
-                <pre>.requerido::after {
-    content: " *";
-    color: #e53e3e;
-}</pre>
-            </div>
+                    <strong>Ejemplo de aplicación:</strong> Nombre del sitio, título de una sección principal.
+                </p>
+                <li>
+                    <h3>Subtítulo:</h3>
+                </li>
+                <h2 class="label-subtitle">Subtítulo (H2)</h2>
+                <p>
+                    <strong>Uso:</strong> Se emplea para dividir el contenido en secciones secundarias. <br>
 
-            <h3>Label con checkbox</h3>
-            <div>
-                <label for="terminos">
-                    <input type="checkbox" id="terminos" name="terminos">
-                    Acepto los términos y condiciones
-                </label>
-            </div>
-            <p>Los labels hacen que los checkboxes y radio buttons sean más fáciles de seleccionar.</p>
-            <div class="labels-cuadro">
-                <h4>Código en HTML:</h4>
-                <pre>&lt;label for="terminos"&gt;
-    &lt;input type="checkbox" id="terminos" name="terminos"&gt;
-    Acepto los términos y condiciones
-&lt;/label&gt;</pre>
-            </div>
+                    <strong>Características:</strong> Un poco más pequeño que el H1, pero aún con peso visual.<br>
 
-            <h3>Estados de labels</h3>
-            <div class="estados-labels">
-                <div>
-                    <h4>Normal</h4>
-                    <label for="normal">Label en estado normal</label>
-                    <input type="text" id="normal" placeholder="Campo normal">
-                </div>
-                
-                <div>
-                    <h4>Hover</h4>
-                    <label for="hover" style="color: #4299e1; cursor: pointer;">Label en estado hover</label>
-                    <input type="text" id="hover" placeholder="Pasa el cursor encima">
-                </div>
-                
-                <div>
-                    <h4>Enfocado</h4>
-                    <label for="focus">Label con campo enfocado</label>
-                    <input type="text" id="focus" placeholder="Campo enfocado" style="border-color: #3182ce; box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);">
-                </div>
-            </div>
-            
-            <div class="labels-cuadro">
-                <h4>Código en CSS para estados:</h4>
-                <pre>/*Estado normal*/
-label {
-    color: #2d3748;
-    font-weight: 600;
-}
+                    <strong>Ejemplo de aplicación:</strong> Encabezados de apartados dentro de una página o sección.
+                    <br>
+                </p>
 
-/*estado hover*/
-label:hover {
-    color: #4299e1;
-    cursor: pointer;
-}
+                <li>
+                    <h3>Subtítulo más pequeño:</h3>
+                </li>
+                <h3 class="label-small-subtitle">Subtítulo más pequeño (H3)</h3>
+                <p>
+                    <strong>Uso:</strong> Divide aún más las secciones, funcionando como subtítulos de los H2.<br>
 
-/*cuando el campo asociado esta enfocado*/
-input:focus + label,
-textarea:focus + label {
-    color: #3182ce;
-    font-weight: bold;
-}</pre>
+                    <strong>Características:</strong> Tamaño intermedio, puede ser menos llamativo que el H2.<br>
+
+                    <strong>Ejemplo de aplicación:</strong> Títulos de subsecciones o temas dentro de un bloque de
+                    texto.<br>
+                </p>
+
+                <li>
+                    <h3>Texto descriptivo (párrafo - &lt;p&gt;): </h3>
+                </li>
+                <p class="label-text">Texto descriptivo normal (párrafo)</p>
+                <p>
+                    <strong>Uso:</strong> Sirve para mostrar el contenido principal en forma de párrafos.<br>
+
+                    <strong>Características:</strong> Fuente estándar, tamaño legible y sin mucho peso visual.<br>
+
+                    <strong>Ejemplo de aplicación:</strong> Explicaciones, descripciones, información detallada.<br>
+                </p>
+
+                <li>
+                    <h3>Etiqueta pequeña (span - información secundaria): </h3>
+                </li>
+                <span class="label-info">Etiqueta pequeña (span)</span>
+                <p>
+                    <strong>Uso:</strong> Para resaltar fragmentos de texto dentro de un párrafo o mostrar información
+                    complementaria.<br>
+
+                    <strong>Características:</strong> Fuente más pequeña, a veces en cursiva o con color distinto.<br>
+
+                    <strong>Ejemplo de aplicación:</strong> Notas, aclaraciones, etiquetas de estado como "Nuevo",
+                    "Oferta", etc.<br>
+                </p>
+            </ol>
+
+            <div class="LabelsCuadro">
+                <h4> Código en HTML: </h4>
+                <pre>
+                    &lt;h1 class="label-title"&gt;Título Principal (H1)&lt;/h1&gt;
+                    &lt;h2 class="label-subtitle"&gt;Subtítulo (H2)&lt;/h2&gt;
+                    &lt;h3 class="label-small-subtitle"&gt;Subtítulo más pequeño (H3)&lt;/h3&gt;
+                    &lt;p class="label-text"&gt;Texto descriptivo normal (párrafo)&lt;/p&gt;
+                    &lt;span class="label-info"&gt;Etiqueta pequeña (span)&lt;/span&gt;
+                </pre>
             </div>
 
-            <h3>Label con Text-area</h3>
-            <div>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
-            </div>
-            <p>Los labels también pueden asociarse con elementos text-area para áreas de texto más largos.</p>
-            <div class="labels-cuadro">
-                <h4>Código en HTML:</h4>
-                <pre>&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
-&lt;textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"&gt;&lt;/textarea&gt;</pre>
-            </div>
         </section>
-        <hr>
 
         <section class="links">
             <h2> Links </h2>
@@ -435,28 +459,37 @@ textarea:focus + label {
                 CSS para mostrar diferentes estados visuales. <br> Ejemplos:
             </p>
 
-            <h3> Link Normal (a):</h3>
-            <p>
-                Es el estilo por defecto del enlace antes de que el usuario interactúe.<br>
-            </p>
+            <ol type="1">
+                <li>
+                    <h3> Link Normal (a):</h3>
+                </li>
+                <p>
+                    Es el estilo por defecto del enlace antes de que el usuario interactúe.<br>
+                </p>
 
-            <h3> Hover (a:hover):</h3>
-            <p>
-                Se activa cuando el usuario pasa el cursor por encima del enlace.<br>
-                Se suele usar para dar una pista visual (cambiar color, subrayar, aumentar tamaño).<br>
-            </p>
+                <li>
+                    <h3> Hover (a:hover):</h3>
+                </li>
+                <p>
+                    Se activa cuando el usuario pasa el cursor por encima del enlace.<br>
+                    Se suele usar para dar una pista visual (cambiar color, subrayar, aumentar tamaño).<br>
+                </p>
 
-            <h3> Active (a:active):</h3>
-            <p>
-                Se activa cuando el usuario hace clic en el enlace y lo mantiene presionado.<br>
-                Suele usarse para dar un efecto de "click real".<br>
-            </p>
+                <li>
+                    <h3> Active (a:active):</h3>
+                </li>
+                <p>
+                    Se activa cuando el usuario hace clic en el enlace y lo mantiene presionado.<br>
+                    Suele usarse para dar un efecto de "click real".<br>
+                </p>
+            </ol>
 
             <a href="https://css-tricks.com/guides/">TOCA ESTE LINK</a>
             <div class="linkCuadro">
                 <h4> Código en HTML: </h4>
-                &lt;a href="https://css-tricks.com/guides/"&gt;TOCA ESTE LINK&lt;/a&gt;
-
+                <pre>
+                    &lt;a href="https://css-tricks.com/guides/"&gt;TOCA ESTE LINK&lt;/a&gt;
+                </pre>
                 <h4> Código en CSS: </h4>
                 <pre>
                     /*Normal*/
@@ -478,7 +511,6 @@ textarea:focus + label {
                 </pre>
             </div>
         </section>
-        <hr>
 
         <section class="radio-buttons">
             <h2>Radio Buttons</h2>
@@ -572,7 +604,6 @@ textarea:focus + label {
             </div>
 
         </section>
-        <hr>
 
         <section class="checkboxes">
             <h2> Checkboxes</h2>
@@ -583,180 +614,196 @@ textarea:focus + label {
                 Ejemplos:
             </p>
 
-            <h3>Checkbox Normal:</h3>
-            <label>
-                <input type="checkbox" name="notificacion">
-                Recibir notificaciones
-            </label>
-            <p>
-                -Es el estado inicial por defecto.<br>
-                - El usuario puede marcarlo o desmarcarlo libremente.<br>
-                - Útil para opciones opcionales.<br>
-            </p>
-            <div class="checkboxCuadro">
-                <h4> Código en HTML: </h4>
+            <ol type="1">
+                <li>
+                    <h3>Checkbox Normal:</h3>
+                </li>
+                <label>
+                    <input type="checkbox" name="notificacion">
+                    Recibir notificaciones
+                </label>
                 <p>
-                    &lt;label&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="notificacion"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Recibir notificaciones<br>
-                    &lt;/label&gt;
+                    -Es el estado inicial por defecto.<br>
+                    - El usuario puede marcarlo o desmarcarlo libremente.<br>
+                    - Útil para opciones opcionales.<br>
                 </p>
-            </div>
+                <div class="checkboxCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="notificacion"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Recibir notificaciones<br>
+                        &lt;/label&gt;
+                    </p>
+                </div>
 
-            <h3>Checkbox preseleccionado (checked)</h3>
-            <label>
-                <input type="checkbox" name="ofertas" checked>
-                Recibir ofertas
-            </label>
-            <p>
-                - Empieza marcado desde el inicio.<br>
-                - Se usa cuando quieres sugerir al usuario que esa opción ya está activada.<br>
-                - Aún puede desmarcarlo si quiere.<br>
-            </p>
-            <div class="checkboxCuadro">
-                <h4> Código en HTML: </h4>
+                <li>
+                    <h3>Checkbox preseleccionado (checked)</h3>
+                </li>
+                <label>
+                    <input type="checkbox" name="ofertas" checked>
+                    Recibir ofertas
+                </label>
                 <p>
-                    &lt;label&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="ofertas" checked&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Recibir ofertas<br>
-                    &lt;/label&gt;
+                    - Empieza marcado desde el inicio.<br>
+                    - Se usa cuando quieres sugerir al usuario que esa opción ya está activada.<br>
+                    - Aún puede desmarcarlo si quiere.<br>
                 </p>
-            </div>
+                <div class="checkboxCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="ofertas" checked&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Recibir ofertas<br>
+                        &lt;/label&gt;
+                    </p>
+                </div>
 
-            <h3>Checkbox deshabilitado (disabled)</h3>
-            <label>
-                <input type="checkbox" name="actualizaciones" disabled>
-                Recibir actualizaciones (deshabilitado)
-            </label>
-            <p>
-                -El usuario no lo puede modificar.<br>
-                -Se muestra en gris.<br>
-                -Se usa para opciones no disponibles o que dependen de otra condición.<br>
-            </p>
-            <div class="checkboxCuadro">
-                <h4> Código en HTML: </h4>
+                <li>
+                    <h3>Checkbox deshabilitado (disabled)</h3>
+                </li>
+                <label>
+                    <input type="checkbox" name="actualizaciones" disabled>
+                    Recibir actualizaciones (deshabilitado)
+                </label>
                 <p>
-                    &lt;label&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="actualizaciones" disabled&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Recibir actualizaciones (deshabilitado)<br>
-                    &lt;/label&gt;
+                    -El usuario no lo puede modificar.<br>
+                    -Se muestra en gris.<br>
+                    -Se usa para opciones no disponibles o que dependen de otra condición.<br>
                 </p>
-            </div>
+                <div class="checkboxCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="actualizaciones" disabled&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Recibir actualizaciones (deshabilitado)<br>
+                        &lt;/label&gt;
+                    </p>
+                </div>
 
-            <h3>Checkbox indeterminado (indeterminate)</h3>
-            <label>
-                <input type="checkbox" id="miCheckbox">
-                Selección parcial
-            </label>
-            <script>
-                const chk = document.querySelector("#miCheckbox");
-                chk.indeterminate = true;
-            </script>
-            <p>
-                -Estado visual intermedio (ni marcado ni desmarcado).<br>
-                -Solo se puede activar con JavaScript.<br>
-                -Se usa en casos de selección múltiple (ej: "Seleccionar todos" cuando solo algunas opciones están
-                marcadas).<br>
-            </p>
-            <div class="checkboxCuadro">
-                <h4> Código en HTML: </h4>
+                <li>
+                    <h3>Checkbox indeterminado (indeterminate)</h3>
+                </li>
+                <label>
+                    <input type="checkbox" id="miCheckbox">
+                    Selección parcial
+                </label>
+                <script>
+                    const chk = document.querySelector("#miCheckbox");
+                    chk.indeterminate = true;
+                </script>
                 <p>
-                    &lt;label&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="miCheckbox"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Selección parcial<br>
-                    &lt;/label&gt;<br>
-                    &lt;script&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;const chk = document.querySelector("#miCheckbox");<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;chk.indeterminate = true;<br>
-                    &lt;/script&gt;
+                    -Estado visual intermedio (ni marcado ni desmarcado).<br>
+                    -Solo se puede activar con JavaScript.<br>
+                    -Se usa en casos de selección múltiple (ej: "Seleccionar todos" cuando solo algunas opciones están
+                    marcadas).<br>
                 </p>
-            </div>
+                <div class="checkboxCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="miCheckbox"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Selección parcial<br>
+                        &lt;/label&gt;<br>
+                        &lt;script&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;const chk = document.querySelector("#miCheckbox");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;chk.indeterminate = true;<br>
+                        &lt;/script&gt;
+                    </p>
+                </div>
+            </ol>
         </section>
 
-        <hr>
         <section class="select_dropdown">
             <h2> Select / Dropdown </h2>
-            <p> 
+            <p>
                 Los elementos &lt;select&gt; en HTML se utilizan para crear menús desplegables
                 (dropdowns). Estos permiten al usuario elegir una opción de una lista predefinida. <br>
                 Cada opción se define con la etiqueta &lt;option&gt; dentro del &lt;select&gt;.
             </p>
 
-            <h3> Select básico: </h3>
-            <label for="frutas">Elige una fruta:</label>
-            <select id="frutas" name="frutas">
-                <option value="manzana">Manzana</option>
-                <option value="banana">Banana</option>
-                <option value="naranja">Naranja</option>
-                <option value="uva">Uva</option>
-            </select>
-            <p>
-                Este ejemplo muestra un menú desplegable con cuatro opciones.
-            </p>
-
-            <div class="SelectCuadro">
-                <h4> Código en HTML: </h4>
+            <ol type="1">
+                <li>
+                    <h3> Select básico: </h3>
+                </li>
+                <label for="frutas">Elige una fruta:</label>
+                <select id="frutas" name="frutas">
+                    <option value="manzana">Manzana</option>
+                    <option value="banana">Banana</option>
+                    <option value="naranja">Naranja</option>
+                    <option value="uva">Uva</option>
+                </select>
                 <p>
-                    &lt;label for="frutas"&gt;Elige una fruta:&lt;/label&gt;<br>
-                    &lt;select id="frutas" name="frutas"&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="manzana"&gt;Manzana&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="banana"&gt;Banana&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="naranja"&gt;Naranja&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="uva"&gt;Uva&lt;/option&gt;<br>
-                    &lt;/select&gt;
+                    Este ejemplo muestra un menú desplegable con cuatro opciones.
                 </p>
-            </div>
 
-            <h3> Select con opción preseleccionada: </h3>
-            <label for="pais">Selecciona tu país:</label>
-            <select id="pais" name="pais">
-                <option value="cr">Costa Rica</option>
-                <option value="mx" selected>México</option>
-                <option value="es">España</option>
-                <option value="ar">Argentina</option>
-            </select>
-            <p>
-                La opción con el atributo <code>selected</code> aparece marcada por defecto.
-            </p>
+                <div class="SelectCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;label for="frutas"&gt;Elige una fruta:&lt;/label&gt;<br>
+                        &lt;select id="frutas" name="frutas"&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="manzana"&gt;Manzana&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="banana"&gt;Banana&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="naranja"&gt;Naranja&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="uva"&gt;Uva&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </p>
+                </div>
 
-            <div class="SelectCuadro">
-                <h4> Código en HTML: </h4>
+                <li>
+                    <h3> Select con opción preseleccionada: </h3>
+                </li>
+                <label for="pais">Selecciona tu país:</label>
+                <select id="pais" name="pais">
+                    <option value="cr">Costa Rica</option>
+                    <option value="mx" selected>México</option>
+                    <option value="es">España</option>
+                    <option value="ar">Argentina</option>
+                </select>
                 <p>
-                    &lt;select id="pais" name="pais"&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="cr"&gt;Costa Rica&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="mx" selected&gt;México&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="es"&gt;España&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="ar"&gt;Argentina&lt;/option&gt;<br>
-                    &lt;/select&gt;
+                    La opción con el atributo <code>selected</code> aparece marcada por defecto.
                 </p>
-            </div>
 
-            <h3> Select con múltiples opciones: </h3>
-            <label for="colores">Selecciona colores favoritos:</label>
-            <select id="colores" name="colores" multiple size="4">
-                <option value="rojo">Rojo</option>
-                <option value="azul">Azul</option>
-                <option value="verde">Verde</option>
-                <option value="amarillo">Amarillo</option>
-            </select>
-            <p>
-                Con el atributo <code>multiple</code> el usuario puede elegir más de una opción.
-            </p>
+                <div class="SelectCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;select id="pais" name="pais"&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="cr"&gt;Costa Rica&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="mx" selected&gt;México&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="es"&gt;España&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="ar"&gt;Argentina&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </p>
+                </div>
 
-            <div class="SelectCuadro">
-                <h4> Código en HTML: </h4>
+                <li>
+                    <h3> Select con múltiples opciones: </h3>
+                </li>
+                <label for="colores">Selecciona colores favoritos:</label>
+                <select id="colores" name="colores" multiple size="4">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="amarillo">Amarillo</option>
+                </select>
                 <p>
-                    &lt;select id="colores" name="colores" multiple size="4"&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="rojo"&gt;Rojo&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="azul"&gt;Azul&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="verde"&gt;Verde&lt;/option&gt;<br>
-                    &nbsp;&nbsp;&lt;option value="amarillo"&gt;Amarillo&lt;/option&gt;<br>
-                    &lt;/select&gt;
+                    Con el atributo <code>multiple</code> el usuario puede elegir más de una opción.
                 </p>
-            </div>
+
+                <div class="SelectCuadro">
+                    <h4> Código en HTML: </h4>
+                    <p>
+                        &lt;select id="colores" name="colores" multiple size="4"&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="rojo"&gt;Rojo&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="azul"&gt;Azul&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="verde"&gt;Verde&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="amarillo"&gt;Amarillo&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </p>
+                </div>
+            </ol>
         </section>
 
-        <hr>
         <section class="navbar">
             <h2> Navbar </h2>
             <p>
