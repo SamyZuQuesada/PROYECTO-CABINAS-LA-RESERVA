@@ -1,0 +1,433 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ebf7f8;
+  color: #010937;
+}
+
+/* Estilo del título principal */
+.titulo {
+  text-align: center;
+}
+
+/*Estilo del header*/
+header {
+  background-color: #010937;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*Paleta de colores*/
+.colores {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-right: 15px;
+  border: 1px solid #ddd;
+}
+
+.color-info {
+  flex: 1;
+}
+
+.color-info h4 {
+  margin: 0 0 5px 0;
+}
+
+.color-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #010937;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilos de cada <section>*/
+.inputs,
+.checkboxes,
+.links,
+.select_dropdown,
+.formularios,
+.Botones,
+.labels {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de los cuadros que contienen cada <section> */
+.InputCuadro,
+.CheckboxCuadro,
+.linkCuadro,
+.SelectCuadro,
+.FormularioCuadro,
+.BotonesCuadro,
+.radioCuadro,
+.navbarCuadro,
+.labels-cuadro,
+.labelsCuadro {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+/*Estados de los links*/
+
+/*Normal*/
+a {
+  color: #101652;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*HOVER*/
+a:hover {
+  color: #49708a;
+  text-decoration: underline;
+}
+
+/*Active*/
+a:active {
+  color: #88abc2;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Validación visual */
+.formularios input:invalid,
+.formularios textarea:invalid {
+  border: 2px solid #d9534f;
+  background-color: #fbe9e9;
+}
+
+.formularios input:valid,
+.formularios textarea:valid {
+  border: 2px solid #5cb85c;
+  background-color: #e9f9e9;
+}
+
+form button {
+  background-color: #010937;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #49708a;
+}
+
+/* Estilos de Labels */
+.label-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0a4b75;
+}
+
+.label-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e6495;
+}
+
+.label-small-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #5191c1;
+}
+
+.label-text {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #2b879e;
+}
+
+.label-info {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #013750;
+}
+
+/* Bandon guia*/
+
+/* ===== Navbar Brandon ===== */
+.navbar {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: var(--font);
+}
+
+.navbar-demo {
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.superior {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.logo-navbar {
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.opciones {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.opciones li {
+  list-style: none;
+}
+
+.opciones li a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.opciones li a:hover {
+  background: rgba(0, 0, 0, 0.337);
+  transform: scale(1.05);
+}
+
+/*boton*/
+
+/* Caja contenedora para la sección */
+.radioButtons {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: var(--font);
+}
+
+.radioButtons h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--gris-900);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ===== Radio Buttons con estados ===== */
+.radio-buttons {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--font);
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--gris-200);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .18s ease;
+  background: #fff;
+  color: var(--gris-900);
+}
+
+.radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio .dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--verde-600);
+  display: grid;
+  place-items: center;
+}
+
+.radio .dot::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--verde-600);
+  transform: scale(0);
+  transition: .18s ease;
+}
+
+.radio:hover {
+  box-shadow: var(--shadow);
+}
+
+.radio:has(input:focus-visible) {
+  outline: 3px solid rgba(46, 125, 50, .35);
+  outline-offset: 2px;
+}
+
+.radio:has(input:checked) {
+  border-color: var(--verde-600);
+  background: #f4fbf6;
+}
+
+.radio:has(input:checked) .dot::after {
+  transform: scale(1);
+}
+
+.radio[aria-disabled="true"],
+.radio:has(input:disabled) {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* ===== Botones ===== */
+
+.Botonoes {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+}
+
+.btn {
+  font-family: Arial, sans-serif;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: #49708a;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #001449;
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: #88abc2;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #02779e;
+}
+
+/* Botón terciario */
+.btn-tertiary {
+  background-color: transparent;
+  color: #010937;
+  border: 2px solid #d0e0eb;
+}
+
+.btn-tertiary:hover {
+  background-color: #ebf7f8;
+}
