@@ -171,6 +171,37 @@ header {
 
 
 /* Brandon Navbar */
+/* Brandon Navbar */
+
+.opciones li a {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: relative; 
+  transition: background 0.3s ease, transform 0.3s ease;
+  -webkit-box-reflect: below 10px;
+}
+
+/* línea por debajo */
+.opciones li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;        
+  left: 0;
+  width: 0%;
+  height: 3px;    
+  background: #4CAF50; 
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* cuando pasa el mouse */
+.opciones li a:hover::after {
+  width: 100%;
+}
+
 .superior {
   display: flex;
   justify-content: space-between;
@@ -208,7 +239,7 @@ header {
 }
 
 .opciones li a:hover {
-  background: #dfeaa6a9;
+  background: #00000046;
   box-shadow: none;
   transform: scale(1.05);
 }
@@ -220,7 +251,6 @@ header {
 .logo {
   padding-left: 50px;
 }
-
 /* Section Brandon Servicio */
 .servicios {
   width: min(100%, 1100px);
@@ -706,44 +736,93 @@ header {
 
 
 /* Andrey Comentarios */
-.comentariosContenedor {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 60px 200px 60px 200px;
-}
-
 .Comentario {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+  height: 600px;
 }
 
-.comentarios {
-  border: 1px solid;
+.titulo-comentarios {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+   margin: 35px 0 15px 0;
+  font-style: italic;
+  text-align: center;
+  height: 55px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: #000;
+}
+
+.testimonio-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #eee;
+  position: relative;
+  background: #fff;
+  color: #222;
   border-radius: 12px;
-  padding: 12px;
-  font-family: 'Arial', sans-serif;
-  font-style: normal;
+  box-shadow: none;
+  border-top: 4px solid #eee;
 }
 
-.usuario {
+.cliente-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-style: normal;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  margin-right: 15px;
+  background: #eaeaea;
+  color: #222;
 }
 
-.usuario img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.rating {
-  color: gold;
+.cliente-info h4 {
+  margin: 0 0 5px 0;
+  color: #cde950;
   font-size: 16px;
+  font-weight: 600;
+  color: #222;
 }
+
+.estrellas {
+  color: #f0ed33;
+  font-size: 14px;
+  margin: 0;
+}
+
+.testimonio-card p {
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.testimonio-fecha {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+
 
 /* Ubicacion */
 .ubicacion {
@@ -994,3 +1073,74 @@ iframe {
     padding: 12px;
   }
 }
+
+/* Estilos para modales de detalles de cabinas Brandon*/
+
+/* Botón de detalles */
+.btn-detalle {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-detalle:hover {
+  background: #2E7D32;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+
+  font-size: 20px;
+  background: #fff;
+  padding: 90px;
+  border-radius: 10px;
+  width: min(90%, 600px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-align: left;
+  animation: aparecer 0.3s ease;
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* Botón cerrar */
+.cerrar {
+  float: right;
+  font-size: 40px;
+  cursor: pointer;
+  color: #000000;
+}
+.cerrar:hover {
+  color: #e53935;
+}
+ul li {
+  margin-bottom: 10px; /* agrega 10px de separación hacia abajo */
+}
+.modal-contenido h2
+{
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+ 
