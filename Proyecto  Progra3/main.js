@@ -79,12 +79,31 @@ class ServicioCarusel {
   }
 
   updateCarrusel() {
-    // Mueve el slide
+
     const translateX = -(this.currentIndex * 100);
     this.carrusel.style.transform = `translateX(${translateX}%)`;
   }
 }
 
+
+//Modales /
 document.addEventListener('DOMContentLoaded', () => {
   new ServicioCarusel();
 });
+
+function abrirModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function cerrarModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modales = document.querySelectorAll(".modal");
+  modales.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
