@@ -743,7 +743,7 @@ header {
 .Comentario {
   display: flex;
   flex-direction: column;
-  height: 730px;
+  height: 450px;
 }
 
 .titulo-comentarios {
