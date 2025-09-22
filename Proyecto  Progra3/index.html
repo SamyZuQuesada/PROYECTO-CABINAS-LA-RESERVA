@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@
     <main>
 
         <section class="sobre-nosotros" id="sobre-nosotros">
-            <h1 class="tituloPrincipal">Sobre Nosotros</h1>
+            <h2 class="tituloPrincipal">Sobre Nosotros</h2>
             <div class="sobre-nosotros-contenido">
                 <img src="Imagenes/Image 16 sept 2025, 21_53_34.png" alt="Sobre Nosotros">
                 <p class="texto-sobre-nosotros">
@@ -61,35 +61,37 @@
                     disfrutar.<br>
                     Te invitamos a vivir Guanacaste desde sus raíces y a disfrutar de la paz que solo la naturaleza y la
                     tradición pueden ofrecer.<br>
+                    ¡Te esperamos muy pronto!
                 </p>
             </div>
         </section>
 
         <section class="instalaciones" id="instalaciones">
-            <h1 class="tituloPrincipal">Nuestras Instalaciones:</h1>
+            <h2 class="tituloPrincipal">Nuestras Instalaciones:</h2>
+            <p class="texto">Información sobre lo que ofrecemos en nuestras instalaciones.</p>
 
-            <section class="ContenedorCabinas">
+            <div class="ContenedorCabinas">
                 <div class="cabinasEstilo">
 
-                    <div class="cabina">
+                    <article class="cabina">
                         <img src="Imagenes/Cabina1.1.jpg" alt="Cabina1">
                         <h2><strong>Cabina 1</strong></h2>
                         <button class="btn-detalle" onclick="abrirModal('modalCabina1')">Ver Detalles</button>
-                    </div>
+                    </article>
 
-                    <div class="cabina">
+                    <article class="cabina">
                         <img src="Imagenes/Cabina2.2.jpg" alt="Cabina2">
                         <h2><strong>Cabina 2</strong></h2>
                         <button class="btn-detalle" onclick="abrirModal('modalCabina2')">Ver Detalles</button>
-                    </div>
+                    </article>
 
-                    <div class="cabina">
+                    <article class="cabina">
                         <img src="Imagenes/Cabina3.3.jpg" alt="Cabina3">
                         <h2><strong>Cabina 3</strong></h2>
                         <button class="btn-detalle" onclick="abrirModal('modalCabina3')">Ver Detalles</button>
-                    </div>
+                    </article>
                 </div>
-            </section>
+            </div>
         </section>
 
         <div id="modalCabina1" class="modal">
@@ -243,7 +245,7 @@
             <p class="texto"> ¿Qué dicen nuestros clientes sobre nosotros? </p>
 
             <div class="testimonios-grid">
-                <div class="testimonio-card">
+                <article class="testimonio-card">
                     <div class="testimonio-header">
                         <div class="cliente-avatar">TP</div>
                         <div class="cliente-info">
@@ -253,9 +255,9 @@
                     </div>
                     <p>"Excelente lugar, un paraiso para despegarse de la tecnologia."</p>
                     <div class="testimonio-fecha">Hace 2 semanas</div>
-                </div>
+                </article>
 
-                <div class="testimonio-card">
+                <article class="testimonio-card">
                     <div class="testimonio-header">
                         <div class="cliente-avatar">AH</div>
                         <div class="cliente-info">
@@ -265,9 +267,9 @@
                     </div>
                     <p>"Tranquilidad total. Excelente anfitriona."</p>
                     <div class="testimonio-fecha">Hace 1 mes</div>
-                </div>
+                </article>
 
-                <div class="testimonio-card">
+                <article class="testimonio-card">
                     <div class="testimonio-header">
                         <div class="cliente-avatar">WP</div>
                         <div class="cliente-info">
@@ -277,9 +279,9 @@
                     </div>
                     <p>"Muy bien y atención excelente."</p>
                     <div class="testimonio-fecha">Hace 3 semanas</div>
-                </div>
+                </article>
 
-                <div class="testimonio-card">
+                <article class="testimonio-card">
                     <div class="testimonio-header">
                         <div class="cliente-avatar">CG</div>
                         <div class="cliente-info">
@@ -289,7 +291,7 @@
                     </div>
                     <p>"El mejor lugar en Matambu, Hojancha."</p>
                     <div class="testimonio-fecha">Hace 5 meses</div>
-                </div>
+                </article>
 
             </div>
 
@@ -337,12 +339,12 @@
     </footer>
 
     <script src="main.js"></script>
-</body>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/50683615879" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-    aria-label="Chatea con nosotros en WhatsApp">
-    <img src="Imagenes/whatsapp (1).1.png" alt="WhatsApp">
-</a>
+    <a href="https://wa.me/50683615879" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chatea con nosotros en WhatsApp">
+        <img src="Imagenes/whatsapp (1).1.png" alt="WhatsApp">
+    </a>
+    
+</body>
 
 </html>

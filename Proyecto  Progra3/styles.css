@@ -4,52 +4,18 @@
   box-sizing: border-box;
 }
 
-/* Diseño responsive */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  .tu-clase {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .tu-clase {
-    padding: 10px;
-  }
-}
-
 .contenedor {
   max-width: 3000px;
   margin: 0 auto;
   padding: 1px;
 }
 
-/* Hero Jairo*/
+/* Hero Section */
 .hero-section {
   position: relative;
-  height: 95vh;
-  min-height: 600px;
+  height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 40px;
-
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
 }
 
 .hero-overlay {
@@ -96,24 +62,6 @@
   font-family: 'Arial', sans-serif;
 }
 
-
-header {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-
-/* Contenedor hero */
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Imagen de fondo */
 .hero-background {
   position: absolute;
   top: 0;
@@ -124,16 +72,13 @@ header {
   z-index: 0;
 }
 
-/* Capa hero */
-.hero-overlay {
-  position: absolute;
+/*Header*/
+header {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.441);
-  z-index: 1;
-  border: none;
+  z-index: 10;
 }
 
 /* Header transparente */
@@ -162,15 +107,7 @@ header {
   transition: color 0.3s;
 }
 
-/* Sobre nosotros */
-.texto-sobre-nosotros {
-  font-family: 'Arial', sans-serif;
-  font-style: normal;
-  margin-bottom: 40px;
-}
-
-
-/* Brandon Navbar */
+/* Navbar */
 
 .opciones li a {
   font-size: 20px;
@@ -251,7 +188,7 @@ header {
   padding-left: 50px;
 }
 
-/* Section Brandon Servicio */
+/* Section Servicio */
 .servicios {
   width: min(100%, 1100px);
   margin: auto;
@@ -377,7 +314,6 @@ header {
   right: 18px;
 }
 
-
 .dots {
   position: absolute;
   bottom: 12px;
@@ -414,22 +350,19 @@ header {
   }
 }
 
-/* Sobre Nosotros Samy */
+/* Sobre Nosotros */
 
 .sobre-nosotros {
-
   width: min(100%);
   height: 700px;
   margin: auto;
   padding: 20px;
-  margin-bottom: 40px;
-
 }
 
 .sobre-nosotros-contenido {
   display: flex;
   align-items: flex-start;
-  gap: 50px;
+  gap: 40px;
   justify-content: center;
   justify-content: center;
   max-width: 1000px;
@@ -442,20 +375,19 @@ header {
 }
 
 .sobre-nosotros-contenido img {
-  width: 40%;
-  ;
-  height: 40%;
+  width: 35%;
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.403);
   flex-shrink: 0;
   margin-top: 0;
+  max-width: 320px;
 }
 
 .tituloPrincipal {
   text-align: center;
   margin-bottom: 20px;
-
 }
 
 .texto-sobre-nosotros {
@@ -468,9 +400,10 @@ header {
   background: transparent;
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
-/* FOOTER SAMY */
+/* FOOTER  */
 .footer {
   background: #ade4b5;
   color: #4b5343;
@@ -586,7 +519,7 @@ header {
   margin-bottom: 10px;
 }
 
-/* Instalaciones Samy */
+/* Instalaciones */
 
 .instalaciones {
   width: 100%;
@@ -648,7 +581,7 @@ header {
   color: #444;
 }
 
-/* carrusel paisaje */
+/* Galeria de fotos */
 .tituloPrincipal {
   text-align: center;
   margin-bottom: 1rem;
@@ -739,7 +672,7 @@ header {
 }
 
 
-/* Andrey Comentarios */
+/* Comentarios */
 .Comentario {
   display: flex;
   flex-direction: column;
