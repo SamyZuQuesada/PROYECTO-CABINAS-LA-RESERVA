@@ -171,7 +171,6 @@ header {
 
 
 /* Brandon Navbar */
-/* Brandon Navbar */
 
 .opciones li a {
   font-size: 20px;
@@ -261,7 +260,7 @@ header {
   margin-bottom: 40px;
 }
 
-.texto-galeria {
+.texto {
   text-align: center;
   color: #444;
   margin: 0 0 20px 0;
@@ -730,7 +729,7 @@ header {
   position: relative;
 }
 
-.texto-galeria {
+.texto {
   text-align: center;
   font-family: 'Arial', sans-serif;
   font-style: normal;
@@ -744,7 +743,7 @@ header {
 .Comentario {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 450px;
 }
 
 .titulo-comentarios {
@@ -762,11 +761,11 @@ header {
 .testimonios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 5px;
-  margin-top: 30px;
+  gap: 30px;
+  margin: 20px 20px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: #000;
-  margin-bottom: 40px;
 }
 
 .testimonio-card {
@@ -783,6 +782,8 @@ header {
   box-shadow: none;
   border-top: 4px solid #eee;
   margin-bottom: 20px;
+  border-bottom: 4px solid #eee;
+  margin: 20px;
 }
 
 .cliente-avatar {
@@ -829,6 +830,12 @@ header {
   font-weight: 500;
 }
 
+.texto {
+  text-align: center;
+  color: #444;
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+}
 
 
 /* Ubicacion */
@@ -854,6 +861,32 @@ iframe {
   border: none;
   width: 100%;
   height: 400px;
+}
+
+/*Boton flotante de WhatsApp*/
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ade4b5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
 
 /* =========================
