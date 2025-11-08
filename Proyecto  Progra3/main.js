@@ -1,3 +1,25 @@
+import { landingApi } from './api.js';
+
+// Función simple para cargar datos
+async function cargarDatos() {
+    try {
+        const datos = await landingApi.getData();
+        console.log('Datos recibidos:', datos);
+        
+      
+        document.querySelector('.hero-texto h1').textContent = datos.titulo;
+        
+    } catch (error) {
+        console.log('Usando datos locales por ahora');
+    }
+}
+
+// Ejecutar cuando cargue la página
+document.addEventListener('DOMContentLoaded', cargarDatos);
+
+
+
+
 // Carrusel de servicios
 const carrusel = document.getElementById("carrusel-servicio")
 const slides = document.querySelectorAll(".slide_Servicio")
@@ -114,3 +136,4 @@ function showNext() {
 }
 
 setInterval(showNext, 4000); // cambia cada 4 segundos
+
