@@ -578,7 +578,7 @@ color: #4caf50;
   text-align: center;
   font-style: italic;
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Instalaciones */
@@ -588,10 +588,8 @@ color: #4caf50;
   min-height: 600px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-image: url("ChatGPT Image 25 sept 2025, 23_09_35.png");
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.184);
   background-blend-mode: darken;
 }
 
