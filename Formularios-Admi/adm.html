@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración - Cabañas La Reserva</title>
+  <link href="admi.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Panel de Administración - Cabañas La Reserva</h1>
+    <img src="../Proyecto  Progra3/Imagenes/LOGO CABINAS.1.png" alt="Logo de Cabañas La Reserva" class="logo" />
+
+    <!-- HERO SECTION -->
+    <section>
+      <h2>Hero Section</h2>
+      <form id="form-hero">
+        <input type="text" id="logo_url" placeholder="URL del logo" />
+        <input type="text" id="titulo" placeholder="Título principal" />
+        <textarea id="descripcion" placeholder="Descripción"></textarea>
+        <button type="submit">Actualizar Hero Section</button>
+      </form>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section>
+      <h2>Servicios</h2>
+      <form id="form-servicio">
+        <input type="number" id="servicio_id" placeholder="ID del servicio" />
+        <input type="text" id="titulo_servicio" placeholder="Título del servicio" />
+        <textarea id="descripcion_servicio" placeholder="Descripción del servicio"></textarea>
+        <input type="text" id="imagen_servicio" placeholder="URL de la imagen" />
+        <button type="submit">Actualizar Servicio</button>
+      </form>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section>
+      <h2>Testimonios</h2>
+      <form id="form-testimonio">
+        <input type="number" id="testimonio_id" placeholder="ID del testimonio" />
+        <input type="text" id="autor" placeholder="Autor del testimonio" />
+        <textarea id="texto" placeholder="Texto del testimonio"></textarea>
+        <input type="number" id="puntuacion" placeholder="Puntuación (1-5)" />
+        <button type="submit">Actualizar Testimonio</button>
+      </form>
+    </section>
+
+    <p id="mensaje"></p>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
