@@ -1,162 +1,94 @@
 //----------------------------------------------------------------------------//
-//------BACKEND URL------//
+//------CARGAR DATOS DESDE URL------//
 //----------------------------------------------------------------------------//
-
-const BACKEND_URL = 'http://localhost:3000';
-
-//----------------------------------------------------------------------------//
-//------FUNCIONES PARA MOSTRAR MENSAJES------//
-//----------------------------------------------------------------------------//
-
-function mostrarMensaje(texto, tipo = 'success') {
-  const mensaje = document.getElementById('mensaje');
-  mensaje.textContent = texto;
-  mensaje.className = tipo;
-  mensaje.style.display = 'block';
-  
-  setTimeout(() => {
-    mensaje.style.display = 'none';
-  }, 5000);
+ 
+function cargarDatosDesdeURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const testimonioParam = urlParams.get('testimonio');
+     
+    if (testimonioParam) {
+        try {
+            const testimonio = JSON.parse(decodeURIComponent(testimonioParam));
+            
+            // Llenar el formulario automáticamente
+            document.getElementById('testimonio_id').value = testimonio.id;
+            document.getElementById('autor').value = testimonio.name;
+            document.getElementById('texto').value = testimonio.description;
+            
+            // Mostrar información
+            const infoDiv = document.getElementById('testimonio-info');
+            const infoText = document.getElementById('info-text');
+            infoDiv.style.display = 'block';
+            infoText.textContent = `Editando testimonio de: ${testimonio.name}`;
+            
+        } catch (error) {
+            console.error('Error al cargar datos desde URL:', error);
+        }
+    }
 }
-
-//----------------------------------------------------------------------------//
-//------ACTUALIZAR HERO SECTION (LANDING)------//
-//----------------------------------------------------------------------------//
-
-document.getElementById('form-hero').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const logoUrl = document.getElementById('logo_url').value;
-  const title = document.getElementById('titulo').value;
-  const description = document.getElementById('descripcion').value;
-  
-  if (!title || !description) {
-    mostrarMensaje('Por favor complete todos los campos requeridos', 'error');
-    return;
-  }
-  
-  try {
-    const response = await fetch(`${BACKEND_URL}/landing/1`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        logoUrl: logoUrl || undefined,
-        title: title,
-        description: description
-      })
-    });
-    
-    if (!response.ok) {
-      throw new Error('Error al actualizar el Hero Section');
-    }
-    
-    const result = await response.json();
-    mostrarMensaje('Hero Section actualizado exitosamente', 'success');
-    
-    // Limpiar formulario
-    document.getElementById('form-hero').reset();
-    
-  } catch (error) {
-    console.error('Error:', error);
-    mostrarMensaje('Error al actualizar Hero Section: ' + error.message, 'error');
-  }
-});
-
-//----------------------------------------------------------------------------//
-//------ACTUALIZAR SERVICIO------//
-//----------------------------------------------------------------------------//
-
-document.getElementById('form-servicio').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const id = document.getElementById('servicio_id').value;
-  const nombre = document.getElementById('titulo_servicio').value;
-  const descripcion = document.getElementById('descripcion_servicio').value;
-  const imagenUrl = document.getElementById('imagen_servicio').value;
-  
-  if (!id || !nombre || !descripcion || !imagenUrl) {
-    mostrarMensaje('Por favor complete todos los campos', 'error');
-    return;
-  }
-  
-  try {
-    const response = await fetch(`${BACKEND_URL}/servicios/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        nombre: nombre,
-        descripcion: descripcion,
-        imagenUrl: imagenUrl
-      })
-    });
-    
-    if (!response.ok) {
-      throw new Error('Error al actualizar el servicio');
-    }
-    
-    const result = await response.json();
-    mostrarMensaje('Servicio actualizado exitosamente', 'success');
-    
-    // Limpiar formulario
-    document.getElementById('form-servicio').reset();
-    
-  } catch (error) {
-    console.error('Error:', error);
-    mostrarMensaje('Error al actualizar servicio: ' + error.message, 'error');
-  }
-});
 
 //----------------------------------------------------------------------------//
 //------ACTUALIZAR TESTIMONIO------//
 //----------------------------------------------------------------------------//
 
 document.getElementById('form-testimonio').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const id = document.getElementById('testimonio_id').value;
-  const name = document.getElementById('autor').value;
-  const description = document.getElementById('texto').value;
-  const rating = document.getElementById('puntuacion').value;
-  
-  if (!id || !name || !description || !rating) {
-    mostrarMensaje('Por favor complete todos los campos', 'error');
-    return;
-  }
-  
-  if (rating < 1 || rating > 5) {
-    mostrarMensaje('La puntuación debe estar entre 1 y 5', 'error');
-    return;
-  }
-  
-  try {
-    const response = await fetch(`${BACKEND_URL}/testimonios/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: name,
-        description: description,
-        rating: rating.toString()
-      })
-    });
+    e.preventDefault();
     
-    if (!response.ok) {
-      throw new Error('Error al actualizar el testimonio');
+    const id = document.getElementById('testimonio_id').value;
+    const name = document.getElementById('autor').value;
+    const description = document.getElementById('texto').value;
+    const rating = document.getElementById('puntuacion').value;
+    
+    if (!id || !name || !description) {
+        mostrarMensaje('Por favor complete todos los campos requeridos', 'error');
+        return;
     }
     
-    const result = await response.json();
-    mostrarMensaje('Testimonio actualizado exitosamente', 'success');
-    
-    // Limpiar formulario
+    try {
+        const datos = {
+            name: name,
+            description: description
+        };
+        
+        // Solo agregar rating si se proporcionó
+        if (rating && rating >= 1 && rating <= 5) {
+            datos.rating = rating.toString();
+        }
+        
+        const response = await fetch(`${BACKEND_URL}/testimonios/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datos)
+        });
+        
+        if (!response.ok) {
+            throw new Error('Error al actualizar el testimonio');
+        }
+        
+        const result = await response.json();
+        mostrarMensaje('Testimonio actualizado exitosamente', 'success');
+        
+        // Opcional: Cerrar la ventana después de actualizar
+        setTimeout(() => {
+            window.close();
+        }, 2000);
+        
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarMensaje('Error al actualizar testimonio: ' + error.message, 'error');
+    }
+});
+
+// Botón para limpiar formulario
+document.getElementById('btn-limpiar').addEventListener('click', () => {
     document.getElementById('form-testimonio').reset();
-    
-  } catch (error) {
-    console.error('Error:', error);
-    mostrarMensaje('Error al actualizar testimonio: ' + error.message, 'error');
-  }
+    const infoDiv = document.getElementById('testimonio-info');
+    infoDiv.style.display = 'none';
+});
+
+// Cargar datos cuando la página esté lista
+document.addEventListener('DOMContentLoaded', function() {
+    cargarDatosDesdeURL();
 });

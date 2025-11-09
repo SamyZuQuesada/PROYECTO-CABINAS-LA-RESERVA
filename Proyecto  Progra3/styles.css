@@ -10,6 +10,35 @@
   padding: 1px;
 }
 
+.testimonio-actions {
+    margin-top: 10px;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+  
+.btn-editar {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.btn-editar:hover {
+    background-color: #15803d;
+    transform: translateY(-1px);
+}
+.tiempo-relativo {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;

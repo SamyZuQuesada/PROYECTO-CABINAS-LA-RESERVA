@@ -17,7 +17,46 @@ body {
   border-radius: 1rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
+/* Estilos para los mensajes */
+#mensaje {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
 
+#mensaje.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+#mensaje.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+   
+/* Estilos para la información del testimonio */
+#testimonio-info {
+    background: #f0f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #16a34a;
+}
+
+#testimonio-info h3 {
+    margin: 0 0 8px 0;
+    color: #16a34a;
+}
+
+#testimonio-info p {
+    margin: 0;
+    color: #374151;
+}
 h1 {
   font-size: 1.875rem;
   font-weight: bold;
