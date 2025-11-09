@@ -21,7 +21,7 @@ const testimoniosApi = {
     updateTestimonio: async (id, datos) => {
         const datosConFecha = {
             ...datos,
-            date: new Date().toISOString() // Guarda en formato ISO para calcular después
+            date: new Date().toISOString() //guarda en formato ISO para calcular despues
         };
 
         const response = await fetch(`${API_BASE_URL}/testimonios/${id}`, {
