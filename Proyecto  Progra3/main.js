@@ -1,3 +1,68 @@
+//----------------------------------------------------------------------------//
+
+const API_URL = "http://localhost:3000"; // tu backend
+
+// HERO SECTION
+document.getElementById("form-hero").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = {
+    logo_url: document.getElementById("logo_url").value,
+    titulo: document.getElementById("titulo").value,
+    descripcion: document.getElementById("descripcion").value,
+  };
+
+  await fetch(`${API_URL}/landing`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  mostrarMensaje("Hero Section actualizada correctamente ✅");
+});
+
+// SERVICIOS
+document.getElementById("form-servicio").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const id = document.getElementById("servicio_id").value;
+  const data = {
+    titulo: document.getElementById("titulo_servicio").value,
+    descripcion: document.getElementById("descripcion_servicio").value,
+    imagen_url: document.getElementById("imagen_servicio").value,
+  };
+
+  await fetch(`${API_URL}/servicios/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  mostrarMensaje("Servicio actualizado correctamente ✅");
+});
+
+// TESTIMONIOS
+document.getElementById("form-testimonio").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const id = document.getElementById("testimonio_id").value;
+  const data = {
+    autor: document.getElementById("autor").value,
+    texto: document.getElementById("texto").value,
+    puntuacion: parseInt(document.getElementById("puntuacion").value),
+  };
+
+  await fetch(`${API_URL}/testimonios/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  mostrarMensaje("Testimonio actualizado correctamente ✅");
+});
+
+// Función para mostrar mensajes
+function mostrarMensaje(texto) {
+  const mensaje = document.getElementById("mensaje");
+  mensaje.textContent = texto;
+  setTimeout(() => (mensaje.textContent = ""), 4000);
+}
+
+//----------------------------------------------------------------------------//
 
 // Carrusel de servicios
 const carrusel = document.getElementById("carrusel-servicio")
