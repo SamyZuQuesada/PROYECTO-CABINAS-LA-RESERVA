@@ -1,26 +1,57 @@
-import { landingApi } from './api.js';
+import { landingApi, testimoniosApi } from './api.js';
 
-// Función simple para cargar datos
-async function cargarDatos() {
+function getIniciales(nombre) {
+    if (!nombre) return 'U';
+    return nombre.split(' ').map(palabra => palabra[0]).join('').toUpperCase().substring(0, 2);
+}
+
+function formatearFecha(fechaString) {
+    if (!fechaString) return '';
+    const fecha = new Date(fechaString);
+    return fecha.toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+async function cargarTestimonios() {
     try {
-        const datos = await landingApi.getData();
-        console.log('Datos recibidos:', datos);
+        const testimonios = await testimoniosApi.getTestimonios();
+        const container = document.getElementById('testimonios-container');
         
-      
-        document.querySelector('.hero-texto h1').textContent = datos.titulo;
+        if (!container) return;
         
+        if (testimonios && testimonios.length > 0) {
+            container.innerHTML = testimonios.map(testimonio => `
+                <article class="testimonio-card">
+                    <div class="testimonio-header">
+                        <div class="cliente-avatar">${getIniciales(testimonio.name)}</div>
+                        <div class="cliente-info">
+                            <h4>${testimonio.name}</h4>
+                        </div>
+                    </div>
+                    <p class="testimonio-texto">"${testimonio.description}"</p>
+                    <div class="testimonio-fecha">${formatearFecha(testimonio.date)}</div>
+                </article>
+            `).join('');
+        } else {
+            container.innerHTML = '<p>No hay testimonios disponibles</p>';
+        }
     } catch (error) {
-        console.log('Usando datos locales por ahora');
+        const container = document.getElementById('testimonios-container');
+        if (container) {
+            container.innerHTML = '<p>Error cargando testimonios</p>';
+        }
     }
 }
 
-// Ejecutar cuando cargue la página
-document.addEventListener('DOMContentLoaded', cargarDatos);
+
+document.addEventListener('DOMContentLoaded', function() {
+    cargarTestimonios();
+});
 
 
-
-
-// Carrusel de servicios
 const carrusel = document.getElementById("carrusel-servicio")
 const slides = document.querySelectorAll(".slide_Servicio")
 const dotsContainer = document.getElementById("dots")
@@ -31,109 +62,122 @@ let indiceActual = 0
 const totalSlides = slides.length
 
 // Crear dots
-slides.forEach((_, index) => {
-  const dot = document.createElement("button")
-  dot.setAttribute("aria-label", `Ir a slide ${index + 1}`)
-  dot.setAttribute("aria-current", index === 0 ? "true" : "false")
-  dot.addEventListener("click", () => irASlide(index))
-  dotsContainer.appendChild(dot)
-})
+if (slides.length > 0 && dotsContainer) {
+    slides.forEach((_, index) => {
+        const dot = document.createElement("button")
+        dot.setAttribute("aria-label", `Ir a slide ${index + 1}`)
+        dot.setAttribute("aria-current", index === 0 ? "true" : "false")
+        dot.addEventListener("click", () => irASlide(index))
+        dotsContainer.appendChild(dot)
+    })
+}
 
-const dots = dotsContainer.querySelectorAll("button")
+const dots = dotsContainer ? dotsContainer.querySelectorAll("button") : []
 
 function actualizarCarrusel() {
-  carrusel.style.transform = `translateX(-${indiceActual * 100}%)`
-  dots.forEach((dot, index) => {
-    dot.setAttribute("aria-current", index === indiceActual ? "true" : "false")
-  })
+    if (carrusel) {
+        carrusel.style.transform = `translateX(-${indiceActual * 100}%)`
+    }
+    dots.forEach((dot, index) => {
+        dot.setAttribute("aria-current", index === indiceActual ? "true" : "false")
+    })
 }
 
 function irASlide(index) {
-  indiceActual = index
-  actualizarCarrusel()
+    indiceActual = index
+    actualizarCarrusel()
 }
 
 function siguiente() {
-  indiceActual = (indiceActual + 1) % totalSlides
-  actualizarCarrusel()
+    indiceActual = (indiceActual + 1) % totalSlides
+    actualizarCarrusel()
 }
 
 function anterior() {
-  indiceActual = (indiceActual - 1 + totalSlides) % totalSlides
-  actualizarCarrusel()
+    indiceActual = (indiceActual - 1 + totalSlides) % totalSlides
+    actualizarCarrusel()
 }
 
-btnAdelante.addEventListener("click", siguiente)
-btnAtras.addEventListener("click", anterior)
+if (btnAdelante) btnAdelante.addEventListener("click", siguiente)
+if (btnAtras) btnAtras.addEventListener("click", anterior)
 
 // Auto-play (opcional)
-setInterval(siguiente, 5000)
+if (slides.length > 0) {
+    setInterval(siguiente, 5000)
+}
 
-// Modales
+
 function abrirModal(id) {
-  const modal = document.getElementById(id)
-  if (modal) {
-    modal.style.display = "flex"
-    document.body.style.overflow = "hidden"
-  }
+    const modal = document.getElementById(id)
+    if (modal) {
+        modal.style.display = "flex"
+        document.body.style.overflow = "hidden"
+    }
 }
 
 function cerrarModal(id) {
-  const modal = document.getElementById(id)
-  if (modal) {
-    modal.style.display = "none"
-    document.body.style.overflow = "auto"
-  }
+    const modal = document.getElementById(id)
+    if (modal) {
+        modal.style.display = "none"
+        document.body.style.overflow = "auto"
+    }
 }
 
-// Cerrar modal al hacer clic fuera del contenido
+
 window.addEventListener("click", (e) => {
-  if (e.target.classList.contains("modal")) {
-    e.target.style.display = "none"
-    document.body.style.overflow = "auto"
-  }
-})
-
-// Cerrar menú móvil al hacer clic en un enlace
-document.querySelectorAll(".opciones a").forEach((link) => {
-  link.addEventListener("click", () => {
-    const navToggle = document.getElementById("navToggle")
-    if (navToggle) {
-      navToggle.checked = false
+    if (e.target.classList.contains("modal")) {
+        e.target.style.display = "none"
+        document.body.style.overflow = "auto"
     }
-  })
 })
 
-// Scroll animations
+
+document.querySelectorAll(".opciones a").forEach((link) => {
+    link.addEventListener("click", () => {
+        const navToggle = document.getElementById("navToggle")
+        if (navToggle) {
+            navToggle.checked = false
+        }
+    })
+})
+
+// 🔹 SCROLL ANIMATIONS
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
 }
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible")
-      // Optional: stop observing after animation
-      observer.unobserve(entry.target)
-    }
-  })
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible")
+            observer.unobserve(entry.target)
+        }
+    })
 }, observerOptions)
 
-// Observe all elements with scroll-animate class
+
 document.addEventListener("DOMContentLoaded", () => {
-  const animateElements = document.querySelectorAll(".scroll-animate, .scroll-animate-stagger")
-  animateElements.forEach((el) => observer.observe(el))
+    const animateElements = document.querySelectorAll(".scroll-animate, .scroll-animate-stagger")
+    animateElements.forEach((el) => observer.observe(el))
 })
+
 
 let index = 0;
 const imgs = document.querySelectorAll('.slider img');
 
 function showNext() {
-  imgs[index].classList.remove('active');
-  index = (index + 1) % imgs.length;
-  imgs[index].classList.add('active');
+    if (imgs.length > 0) {
+        imgs[index].classList.remove('active');
+        index = (index + 1) % imgs.length;
+        imgs[index].classList.add('active');
+    }
 }
 
-setInterval(showNext, 4000); // cambia cada 4 segundos
+if (imgs.length > 0) {
+    setInterval(showNext, 4000);
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+    cargarTestimonios();
+});

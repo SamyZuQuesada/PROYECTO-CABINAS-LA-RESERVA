@@ -208,6 +208,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="group relative overflow-hidden rounded-xl" style="aspect-ratio:3/2;">
                         <img src="Imagenes/Imagen6.jpg" alt="Imagen 6" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+
                     </div>
                     <div class="group relative overflow-hidden rounded-xl" style="aspect-ratio:3/2;">
                         <img src="Imagenes/Imagen4.1.jpg" alt="Imagen 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
@@ -241,7 +242,10 @@
             </div>
         </section>
 
-        <section class="Comentario scroll-animate">
+
+
+
+<section class="Comentario scroll-animate">
     <div class="ubicacion-header">
         <h2 class="tituloPrincipal">Comentarios</h2>
         <p class="texto">¿Qué dicen nuestros clientes sobre nosotros?</p>
@@ -252,38 +256,24 @@
     </div>
 </section>
 
-<script type="module">
-    import { testimoniosApi } from './api.js';
-    
-    async function cargarTestimonios() {
-        const testimonios = await testimoniosApi.getTestimonios();
-        const container = document.getElementById('testimonios-container');
-        
-        container.innerHTML = testimonios.map(testimonio => `
-            <article class="testimonio-card scroll-animate-stagger">
-                <div class="testimonio-header">
-                    <div class="cliente-avatar">${getIniciales(testimonio.name)}</div>
-                    <div class="cliente-info">
-                        <h4>${testimonio.name}</h4>
-                    </div>
+
+
+        <section class="ubicacion scroll-animate" id="ubicacion">
+            <div class="ubicacion-header">
+                <h2 class="tituloPrincipal">Contactenos</h2>
+                <p class="texto">Te mostramos nuestra ubicación y contacto para que nos puedas visitar.</p>
+            </div>
+
+            <div class="ubicacion-grid">
+                <div class="ubi">
+                    <iframe title="Ubicación de Cabañas La Reserva"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.3520633998792!2d-85.41920569999999!3d10.0870075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fbbe0013d20cf%3A0x546b3f0fd21b3fa!2sCabinas%20La%20Reserva%20Matamb%C3%BA!5e1!3m2!1ses-419!2scr!4v1757734272422!5m2!1ses-419!2scr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <p>"${testimonio.description}"</p>
-                <div class="testimonio-fecha">${testimonio.date}</div>
-                <button onclick="editarTestimonio(${testimonio.id})">Editar</button>
-            </article>
-        `).join('');
-    }
-    
-    function getIniciales(nombre) {
-        return nombre.split(' ').map(palabra => palabra[0]).join('').toUpperCase();
-    }
-    
-    function editarTestimonio(id) {
-        window.location.href = `editar.html?id=${id}`;
-    }
-    
-    document.addEventListener('DOMContentLoaded', cargarTestimonios);
-</script>
+
+
 
         <section class="ubicacion scroll-animate" id="ubicacion">
             <div class="ubicacion-header">
