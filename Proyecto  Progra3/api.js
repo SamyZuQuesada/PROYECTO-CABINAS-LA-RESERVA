@@ -7,3 +7,23 @@ export const landingApi = {
     },
 
 };
+
+export const testimoniosApi = {
+    // Obtener todos los testimonios
+    getTestimonios: async () => {
+        const response = await fetch(`${API_BASE_URL}/testimonios`);
+        return await response.json();
+    },
+
+    // Actualizar un testimonio
+    updateTestimonio: async (id, datos) => {
+        const response = await fetch(`${API_BASE_URL}/testimonios/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datos)
+        });
+        return await response.json();
+    }
+};

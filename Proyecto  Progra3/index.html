@@ -242,63 +242,48 @@
         </section>
 
         <section class="Comentario scroll-animate">
-          <div class="ubicacion-header">
-                 <h2 class="tituloPrincipal" >Comentarios</h2>
-                <p class="texto">¿Qué dicen nuestros clientes sobre nosotros?</p>
-            </div>
+    <div class="ubicacion-header">
+        <h2 class="tituloPrincipal">Comentarios</h2>
+        <p class="texto">¿Qué dicen nuestros clientes sobre nosotros?</p>
+    </div>
 
-              
-            
-            <div class="testimonios-grid">
-                <article class="testimonio-card scroll-animate-stagger">
-                    <div class="testimonio-header">
-                        <div class="cliente-avatar">TP</div>
-                        <div class="cliente-info">
-                            <h4>Teilor Perez</h4>
-                            <div class="estrellas">★★★★★</div>
-                        </div>
-                    </div>
-                    <p>"Excelente lugar, un paraiso para despegarse de la tecnologia."</p>
-                    <div class="testimonio-fecha">Hace 6 años</div>
-                </article>
+    <div class="testimonios-grid" id="testimonios-container">
+        <!--aqui se cargan los comtarios con js -->
+    </div>
+</section>
 
-                <article class="testimonio-card scroll-animate-stagger">
-                    <div class="testimonio-header">
-                        <div class="cliente-avatar">AH</div>
-                        <div class="cliente-info">
-                            <h4>Alfredo Herrera Rodriguez</h4>
-                            <div class="estrellas">★★★★★</div>
-                        </div>
+<script type="module">
+    import { testimoniosApi } from './api.js';
+    
+    async function cargarTestimonios() {
+        const testimonios = await testimoniosApi.getTestimonios();
+        const container = document.getElementById('testimonios-container');
+        
+        container.innerHTML = testimonios.map(testimonio => `
+            <article class="testimonio-card scroll-animate-stagger">
+                <div class="testimonio-header">
+                    <div class="cliente-avatar">${getIniciales(testimonio.name)}</div>
+                    <div class="cliente-info">
+                        <h4>${testimonio.name}</h4>
                     </div>
-                    <p>"Tranquilidad total. Excelente anfitriona."</p>
-                    <div class="testimonio-fecha">Hace 3 años</div>
-                </article>
-
-                <article class="testimonio-card scroll-animate-stagger">
-                    <div class="testimonio-header">
-                        <div class="cliente-avatar">WP</div>
-                        <div class="cliente-info">
-                            <h4>Walter Piedra M</h4>
-                            <div class="estrellas">★★★★★</div>
-                        </div>
-                    </div>
-                    <p>"Muy bien y atención excelente."</p>
-                    <div class="testimonio-fecha">Hace 4 años</div>
-                </article>
-
-                <article class="testimonio-card scroll-animate-stagger">
-                    <div class="testimonio-header">
-                        <div class="cliente-avatar">CG</div>
-                        <div class="cliente-info">
-                            <h4>Cinthia Gamboa</h4>
-                            <div class="estrellas">★★★★★</div>
-                        </div>
-                    </div>
-                    <p>"El mejor lugar en Matambu, Hojancha."</p>
-                    <div class="testimonio-fecha">Hace 5 meses</div>
-                </article>
-            </div>
-        </section>
+                </div>
+                <p>"${testimonio.description}"</p>
+                <div class="testimonio-fecha">${testimonio.date}</div>
+                <button onclick="editarTestimonio(${testimonio.id})">Editar</button>
+            </article>
+        `).join('');
+    }
+    
+    function getIniciales(nombre) {
+        return nombre.split(' ').map(palabra => palabra[0]).join('').toUpperCase();
+    }
+    
+    function editarTestimonio(id) {
+        window.location.href = `editar.html?id=${id}`;
+    }
+    
+    document.addEventListener('DOMContentLoaded', cargarTestimonios);
+</script>
 
         <section class="ubicacion scroll-animate" id="ubicacion">
             <div class="ubicacion-header">
