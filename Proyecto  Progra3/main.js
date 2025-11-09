@@ -2,6 +2,156 @@
 
 //------BACKEND URL------//
 
+const BACKEND_URL = 'http://localhost:3000';
+
+// Función para cargar datos del backend
+async function cargarDatosBackend() {
+  try {
+    const response = await fetch(`${BACKEND_URL}/landing`);
+    
+    if (!response.ok) {
+      throw new Error('Error al cargar datos del backend');
+    }
+    
+    const landing = await response.json();
+    console.log('Datos cargados:', landing);
+    
+    // Actualizar el hero con datos del backend
+    actualizarHero(landing);
+    
+    // Actualizar servicios con datos del backend
+    actualizarServicios(landing.servicios);
+    
+    // Actualizar testimonios con datos del backend
+    actualizarTestimonios(landing.testimonios);
+    
+  } catch (error) {
+    console.error('Error al conectar con el backend:', error);
+    // Continuar mostrando los datos estáticos si falla el backend
+  }
+}
+
+// Función para actualizar el hero/about
+function actualizarHero(landing) {
+  if (landing.title) {
+    const heroTitulo = document.querySelector('.hero-texto h1');
+    if (heroTitulo) {
+      heroTitulo.innerHTML = `¡Bienvenidos a <span class="resaltado">${landing.title}</span>!`;
+    }
+  }
+  
+  if (landing.description) {
+    const heroDescripcion = document.querySelector('.hero-texto h2');
+    if (heroDescripcion) {
+      heroDescripcion.textContent = landing.description;
+    }
+  }
+  
+  if (landing.logoUrl) {
+    const logo = document.querySelector('.logo img');
+    if (logo) {
+      logo.src = landing.logoUrl;
+    }
+  }
+}
+
+// Función para actualizar servicios dinámicamente
+function actualizarServicios(servicios) {
+  if (!servicios || servicios.length === 0) return;
+  
+  const carruselServicio = document.getElementById('carrusel-servicio');
+  if (!carruselServicio) return;
+  
+  // Limpiar slides existentes
+  carruselServicio.innerHTML = '';
+  
+  // Crear slides dinámicos
+  servicios.forEach(servicio => {
+    const slide = document.createElement('div');
+    slide.className = 'slide_Servicio';
+    slide.innerHTML = `
+      <img src="${servicio.imagenUrl}" alt="${servicio.nombre}">
+      <div class="overlayServicio">
+        <h3>${servicio.nombre}</h3>
+        <p>${servicio.descripcion}</p>
+      </div>
+    `;
+    carruselServicio.appendChild(slide);
+  });
+  
+  // Reinicializar el carrusel si se actualizaron los servicios
+  reinicializarCarrusel();
+}
+
+// Función para actualizar testimonios dinámicamente
+function actualizarTestimonios(testimonios) {
+  if (!testimonios || testimonios.length === 0) return;
+  
+  const testimoniosGrid = document.querySelector('.testimonios-grid');
+  if (!testimoniosGrid) return;
+  
+  // Limpiar testimonios existentes
+  testimoniosGrid.innerHTML = '';
+  
+  // Crear testimonios dinámicos
+  testimonios.forEach(testimonio => {
+    const iniciales = obtenerIniciales(testimonio.name);
+    const estrellas = '★'.repeat(parseInt(testimonio.rating)) + '☆'.repeat(5 - parseInt(testimonio.rating));
+    
+    const testimonioCard = document.createElement('article');
+    testimonioCard.className = 'testimonio-card scroll-animate-stagger';
+    testimonioCard.innerHTML = `
+      <div class="testimonio-header">
+        <div class="cliente-avatar">${iniciales}</div>
+        <div class="cliente-info">
+          <h4>${testimonio.name}</h4>
+          <div class="estrellas">${estrellas}</div>
+        </div>
+      </div>
+      <p>"${testimonio.description}"</p>
+      <div class="testimonio-fecha">${testimonio.date}</div>
+    `;
+    testimoniosGrid.appendChild(testimonioCard);
+  });
+  
+  // Reiniciar observer para animaciones
+  const animateElements = document.querySelectorAll('.scroll-animate-stagger');
+  animateElements.forEach((el) => observer.observe(el));
+}
+
+// Función auxiliar para obtener iniciales
+function obtenerIniciales(nombre) {
+  return nombre
+    .split(' ')
+    .map(palabra => palabra.charAt(0).toUpperCase())
+    .slice(0, 2)
+    .join('');
+}
+
+// Función para reinicializar el carrusel después de actualizar servicios
+function reinicializarCarrusel() {
+  const carrusel = document.getElementById("carrusel-servicio");
+  const slides = document.querySelectorAll(".slide_Servicio");
+  const dotsContainer = document.getElementById("dots");
+  
+  if (!slides.length) return;
+  
+  // Limpiar dots existentes
+  dotsContainer.innerHTML = '';
+  
+  // Recrear dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", `Ir a slide ${index + 1}`);
+    dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+    dot.addEventListener("click", () => irASlide(index));
+    dotsContainer.appendChild(dot);
+  });
+  
+  indiceActual = 0;
+  actualizarCarrusel();
+}
+
 //----------------------------------------------------------------------------//
 
 // Carrusel de servicios
