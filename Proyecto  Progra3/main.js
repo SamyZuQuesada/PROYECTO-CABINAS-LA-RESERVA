@@ -1,48 +1,6 @@
 //----------------------------------------------------------------------------//
 
-const API_URL = "http://localhost:3000"; // tu backend
-
-// HERO SECTION
-document.getElementById("form-hero").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const data = {
-    logo_url: document.getElementById("logoUrl").value,
-    titulo: document.getElementById("titulo").value,
-    descripcion: document.getElementById("descripcion").value,
-  };
-
-  await fetch(`${API_URL}/landing`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-  mostrarMensaje("Hero Section actualizado correctamente!!");
-});
-
-// SERVICIOS
-document.getElementById("form-servicio").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const id = document.getElementById("servicio_id").value;
-  const data = {
-    nombre: document.getElementById("nombre").value,
-    descripcion: document.getElementById("descripcion").value,
-    imagenUrl: document.getElementById("imagenUrl").value,
-  };
-
-  await fetch(`${API_URL}/servicios/${id}`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-  mostrarMensaje("Servicio actualizado correctamente!!");
-});
-
-// Función para mostrar mensajes
-function mostrarMensaje(texto) {
-  const mensaje = document.getElementById("mensaje");
-  mensaje.textContent = texto;
-  setTimeout(() => (mensaje.textContent = ""), 4000);
-}
+//------BACKEND URL------//
 
 //----------------------------------------------------------------------------//
 
