@@ -24,9 +24,9 @@ document.getElementById("form-servicio").addEventListener("submit", async (e) =>
   e.preventDefault();
   const id = document.getElementById("servicio_id").value;
   const data = {
-    titulo: document.getElementById("titulo_servicio").value,
-    descripcion: document.getElementById("descripcion_servicio").value,
-    imagen_url: document.getElementById("imagen_servicio").value,
+    nombre: document.getElementById("nombre").value,
+    descripcion: document.getElementById("descripcion").value,
+    imagenUrl: document.getElementById("imagenUrl").value,
   };
 
   await fetch(`${API_URL}/servicios/${id}`, {
@@ -35,24 +35,6 @@ document.getElementById("form-servicio").addEventListener("submit", async (e) =>
     body: JSON.stringify(data),
   });
   mostrarMensaje("Servicio actualizado correctamente!!");
-});
-
-// TESTIMONIOS
-document.getElementById("form-testimonio").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const id = document.getElementById("testimonio_id").value;
-  const data = {
-    autor: document.getElementById("autor").value,
-    texto: document.getElementById("texto").value,
-    puntuacion: parseInt(document.getElementById("puntuacion").value),
-  };
-
-  await fetch(`${API_URL}/testimonios/${id}`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-  mostrarMensaje("Testimonio actualizado correctamente!!");
 });
 
 // Función para mostrar mensajes
