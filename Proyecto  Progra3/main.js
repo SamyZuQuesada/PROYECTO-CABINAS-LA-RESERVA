@@ -1,23 +1,3 @@
-// Insertar API: En base a lo que hizo Jairo
-import { landingApi } from './api.js';
-
-// Función simple para cargar datos
-async function cargarDatos() {
-    try {
-        const datos = await landingApi.getData();
-        console.log('Datos recibidos:', datos);
-        
-      
-        document.querySelector('.hero-texto h1').textContent = datos.titulo;
-        
-    } catch (error) {
-        console.log('Usando datos locales por ahora');
-    }
-}
-
-// Ejecutar cuando cargue la página
-document.addEventListener('DOMContentLoaded', cargarDatos);
-
 
 // Carrusel de servicios
 const carrusel = document.getElementById("carrusel-servicio")
