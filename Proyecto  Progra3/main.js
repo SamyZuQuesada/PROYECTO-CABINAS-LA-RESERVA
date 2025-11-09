@@ -6,7 +6,7 @@ const API_URL = "http://localhost:3000"; // tu backend
 document.getElementById("form-hero").addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = {
-    logo_url: document.getElementById("logo_url").value,
+    logo_url: document.getElementById("logoUrl").value,
     titulo: document.getElementById("titulo").value,
     descripcion: document.getElementById("descripcion").value,
   };
@@ -16,7 +16,7 @@ document.getElementById("form-hero").addEventListener("submit", async (e) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  mostrarMensaje("Hero Section actualizada correctamente ✅");
+  mostrarMensaje("Hero Section actualizado correctamente!!");
 });
 
 // SERVICIOS
@@ -34,7 +34,7 @@ document.getElementById("form-servicio").addEventListener("submit", async (e) =>
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  mostrarMensaje("Servicio actualizado correctamente ✅");
+  mostrarMensaje("Servicio actualizado correctamente!!");
 });
 
 // TESTIMONIOS
@@ -52,7 +52,7 @@ document.getElementById("form-testimonio").addEventListener("submit", async (e) 
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  mostrarMensaje("Testimonio actualizado correctamente ✅");
+  mostrarMensaje("Testimonio actualizado correctamente!!");
 });
 
 // Función para mostrar mensajes

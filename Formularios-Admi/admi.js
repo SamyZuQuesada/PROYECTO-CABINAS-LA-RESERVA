@@ -18,4 +18,3 @@ function updateLanding(landingData) {
     .then((response) => response.json())
     .then((json) => console.log(json));
 }
-
