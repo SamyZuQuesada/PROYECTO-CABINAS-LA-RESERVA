@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel de Administración - Cabañas La Reserva</title>
   <link href="admi.css" rel="stylesheet">
 </head>
-
 <body>
   <div class="container">
     <h1>Panel de Administración - Cabañas La Reserva</h1>
@@ -16,22 +14,24 @@
     <!-- HERO SECTION -->
     <section>
       <h2>Hero Section</h2>
-      <form id="form-hero">
-        <input type="text" id="logo_url" placeholder="URL del logo" />
-        <input type="text" id="titulo" placeholder="Título principal" />
-        <textarea id="descripcion" placeholder="Descripción"></textarea>
-        <button type="submit">Actualizar Hero Section</button>
+      <form id="form-hero" autocomplete="off">
+        <input type="text" id="logoInput" placeholder="URL del logo" />
+        <input type="text" id="tituloInput" placeholder="Título principal" />
+        <textarea id="descripcionInput" placeholder="Descripción"></textarea>
+        <!-- Botón que usa el JS: document.getElementById('btnUpdateHero').addEventListener('click', updateHero) -->
+        <button type="button" id="btnUpdateHero">Actualizar Hero Section</button>
       </form>
     </section>
 
     <!-- SERVICIOS -->
     <section>
       <h2>Servicios</h2>
-      <form id="form-servicio">
+      <form id="form-servicio" autocomplete="off">
         <input type="number" id="servicio_id" placeholder="ID del servicio" />
         <input type="text" id="titulo_servicio" placeholder="Título del servicio" />
         <textarea id="descripcion_servicio" placeholder="Descripción del servicio"></textarea>
         <input type="text" id="imagen_servicio" placeholder="URL de la imagen" />
+        <!-- El submit lo captura tu JS con addEventListener('submit', ...) -->
         <button type="submit">Actualizar Servicio</button>
       </form>
     </section>
@@ -39,20 +39,21 @@
     <!-- TESTIMONIOS -->
     <section>
       <h2>Testimonios</h2>
-      <form id="form-testimonio">
+      <form id="form-testimonio" autocomplete="off">
         <input type="number" id="testimonio_id" placeholder="ID del testimonio" />
         <input type="text" id="autor" placeholder="Autor del testimonio" />
         <textarea id="texto" placeholder="Texto del testimonio"></textarea>
         <input type="number" id="puntuacion" placeholder="Puntuación (1-5)" />
+        <!-- El submit lo captura tu JS con addEventListener('submit', ...) -->
         <button type="submit">Actualizar Testimonio</button>
       </form>
     </section>
 
-    <p id="mensaje"></p>
+    <p id="mensaje" style="display:none"></p>
   </div>
 
+  <!-- Asegúrate de que en admi.js tengas el mismo mapping de IDs -->
   <script src="admi.js"></script>
-
+  <script src="get.js"></script>
 </body>
-
 </html>

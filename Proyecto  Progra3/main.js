@@ -1,35 +1,4 @@
-//----------------------------------------------------------------------------//
 
-//------BACKEND URL------//
-
-const BACKEND_URL = 'http://localhost:3000';
-
-// Función para cargar datos del backend
-async function cargarDatosBackend() {
-  try {
-    const response = await fetch(`${BACKEND_URL}/landing`);
-    
-    if (!response.ok) {
-      throw new Error('Error al cargar datos del backend');
-    }
-    
-    const landing = await response.json();
-    console.log('Datos cargados:', landing);
-    
-    // Actualizar el hero con datos del backend
-    actualizarHero(landing);
-    
-    // Actualizar servicios con datos del backend
-    actualizarServicios(landing.servicios);
-    
-    // Actualizar testimonios con datos del backend
-    actualizarTestimonios(landing.testimonios);
-    
-  } catch (error) {
-    console.error('Error al conectar con el backend:', error);
-    // Continuar mostrando los datos estáticos si falla el backend
-  }
-}
 
 // Función para actualizar el hero/about
 function actualizarHero(landing) {
