@@ -79,10 +79,6 @@ document.getElementById('form-hero').addEventListener('submit', async (e) => {
             window.opener.location.reload();
         }
         
-        // Opcional: Cerrar la ventana después de actualizar
-        setTimeout(() => {
-            window.close();
-        }, 2000);
         
     } catch (error) {
         console.error('Error:', error);
@@ -131,11 +127,6 @@ document.getElementById('form-servicio').addEventListener('submit', async (e) =>
             window.opener.location.reload();
         }
         
-        // Opcional: Cerrar la ventana después de actualizar
-        setTimeout(() => {
-            window.close();
-        }, 2000);
-        
     } catch (error) {
         console.error('Error:', error);
         mostrarMensaje('Error al actualizar servicio: ' + error.message, 'error');
@@ -182,10 +173,6 @@ document.getElementById('form-testimonio').addEventListener('submit', async (e) 
             window.opener.location.reload();
         }
         
-        // Opcional: Cerrar la ventana después de actualizar
-        setTimeout(() => {
-            window.close();
-        }, 2000);
         
     } catch (error) {
         console.error('Error:', error);
@@ -193,12 +180,6 @@ document.getElementById('form-testimonio').addEventListener('submit', async (e) 
     }
 });
 
-// Botón para limpiar formulario
-document.getElementById('btn-limpiar').addEventListener('click', () => {
-    document.getElementById('form-testimonio').reset();
-    const infoDiv = document.getElementById('testimonio-info');
-    infoDiv.style.display = 'none';
-});
 
 // Cargar datos cuando la página esté lista
 document.addEventListener('DOMContentLoaded', function() {
