@@ -1,7 +1,6 @@
-//----------------------------------------------------------------------------//
-//------CARGAR DATOS DESDE URL------//
-//----------------------------------------------------------------------------//
- 
+const API_BASE_URL = 'http://localhost:3000';
+
+//carga los datos del url
 function cargarDatosDesdeURL() {
     const urlParams = new URLSearchParams(window.location.search);
     const testimonioParam = urlParams.get('testimonio');
@@ -27,17 +26,123 @@ function cargarDatosDesdeURL() {
     }
 }
 
-//----------------------------------------------------------------------------//
-//------ACTUALIZAR TESTIMONIO------//
-//----------------------------------------------------------------------------//
+// FUNCIÓN PARA MOSTRAR MENSAJES
+function mostrarMensaje(mensaje, tipo) {
+    const mensajeDiv = document.getElementById('mensaje');
+    mensajeDiv.textContent = mensaje;
+    mensajeDiv.className = tipo;
+    mensajeDiv.style.display = 'block';
+    
+    setTimeout(() => {
+        mensajeDiv.style.display = 'none';
+    }, 4000);
+}
 
+// FORMULARIO LANDING (HERO SECTION)
+document.getElementById('form-hero').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const logoUrl = document.getElementById('logo_url').value;
+    const titulo = document.getElementById('titulo').value;
+    const descripcion = document.getElementById('descripcion').value;
+    
+    try {
+        const datos = {
+            logoUrl: logoUrl,
+            title: titulo,
+            description: descripcion
+        };
+            
+        const response = await fetch(`${API_BASE_URL}/landing/1`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datos)
+        });
+        
+        if (!response.ok) {
+            throw new Error('Error al actualizar el hero section');
+        }
+        
+        const result = await response.json();
+        mostrarMensaje('Hero section actualizado exitosamente', 'success');
+
+        // Recargar la página principal
+        if (window.opener && !window.opener.closed) {
+            window.opener.location.reload();
+        }
+        
+        // Opcional: Cerrar la ventana después de actualizar
+        setTimeout(() => {
+            window.close();
+        }, 2000);
+        
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarMensaje('Error al actualizar hero section: ' + error.message, 'error');
+    }
+});
+
+// FORMULARIO SERVICIOS
+document.getElementById('form-servicio').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const id = document.getElementById('servicio_id').value;
+    const nombre = document.getElementById('titulo_servicio').value;
+    const descripcion = document.getElementById('descripcion_servicio').value;
+    const imagenUrl = document.getElementById('imagen_servicio').value;
+    
+    if (!id || !nombre || !descripcion || !imagenUrl) {
+        mostrarMensaje('Por favor complete todos los campos requeridos', 'error');
+        return;
+    }
+    
+    try {
+        const datos = {
+            nombre: nombre,
+            descripcion: descripcion,
+            imagenUrl: imagenUrl
+        };
+            
+        const response = await fetch(`${API_BASE_URL}/servicios/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datos)
+        });
+        
+        if (!response.ok) {
+            throw new Error('Error al actualizar el servicio');
+        }
+        
+        const result = await response.json();
+        mostrarMensaje('Servicio actualizado exitosamente', 'success');
+
+        // Recargar la página principal
+        if (window.opener && !window.opener.closed) {
+            window.opener.location.reload();
+        }
+        
+        // Opcional: Cerrar la ventana después de actualizar
+        setTimeout(() => {
+            window.close();
+        }, 2000);
+        
+    } catch (error) {
+        console.error('Error:', error);
+        mostrarMensaje('Error al actualizar servicio: ' + error.message, 'error');
+    }
+});
+
+// FORMULARIO TESTIMONIOS
 document.getElementById('form-testimonio').addEventListener('submit', async (e) => {
     e.preventDefault();
     
     const id = document.getElementById('testimonio_id').value;
     const name = document.getElementById('autor').value;
     const description = document.getElementById('texto').value;
-    const rating = document.getElementById('puntuacion').value;
     
     if (!id || !name || !description) {
         mostrarMensaje('Por favor complete todos los campos requeridos', 'error');
@@ -49,13 +154,8 @@ document.getElementById('form-testimonio').addEventListener('submit', async (e) 
             name: name,
             description: description
         };
-        
-        // Solo agregar rating si se proporcionó
-        if (rating && rating >= 1 && rating <= 5) {
-            datos.rating = rating.toString();
-        }
-        
-        const response = await fetch(`${BACKEND_URL}/testimonios/${id}`, {
+            
+        const response = await fetch(`${API_BASE_URL}/testimonios/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,6 +169,11 @@ document.getElementById('form-testimonio').addEventListener('submit', async (e) 
         
         const result = await response.json();
         mostrarMensaje('Testimonio actualizado exitosamente', 'success');
+
+        // Recargar la página principal
+        if (window.opener && !window.opener.closed) {
+            window.opener.location.reload();
+        }
         
         // Opcional: Cerrar la ventana después de actualizar
         setTimeout(() => {
