@@ -33,16 +33,16 @@ const testimoniosApi = {
         return await response.json();
     }
 };
-// Función para redirigir al formulario de administración
+//funcion para redirigir al formulario
 function editarTestimonio(id, nombre, descripcion) {
-    // Codificar los datos para pasarlos por URL
+    //codifica los datos para pasarlos por url
     const datosCodificados = encodeURIComponent(JSON.stringify({
         id: id,
         name: nombre,
         description: descripcion
     }));
     
-    // Redirigir al panel de administración con los datos
+    //redirige al panel de administracion con los datos:
     window.open(`admin.html?testimonio=${datosCodificados}`, '_blank');
 }
 
@@ -111,7 +111,7 @@ function tiempoRelativo(fechaISO) {
             if (contador === 1) {
                 return `hace ${contador} ${intervalo.nombre}`;
             } else {
-                // Pluralizar
+                //pluralizar
                 const nombrePlural = intervalo.nombre === 'mes' ? 'meses' : 
                                    intervalo.nombre + 's';
                 return `hace ${contador} ${nombrePlural}`;
@@ -120,42 +120,6 @@ function tiempoRelativo(fechaISO) {
     }
     
     return 'hace un momento';
-}
-
-async function cargarTestimonios() {
-    try {
-        const testimonios = await testimoniosApi.getTestimonios();
-        const container = document.getElementById('testimonios-container');
-        
-        if (!container) return;
-        
-        if (testimonios && testimonios.length > 0) {
-            container.innerHTML = testimonios.map(testimonio => `
-                <article class="testimonio-card">
-                    <div class="testimonio-header">
-                        <div class="cliente-avatar">${getIniciales(testimonio.name)}</div>
-                        <div class="cliente-info">
-                            <h4>${testimonio.name}</h4>
-                            <div class="tiempo-relativo">${tiempoRelativo(testimonio.date)}</div>
-                        </div>
-                    </div>
-                    <p class="testimonio-texto">"${testimonio.description}"</p>
-                    <div class="testimonio-actions">
-                        <button class="btn-editar" onclick="editarTestimonio(${testimonio.id}, '${testimonio.name.replace(/'/g, "\\'")}', '${testimonio.description.replace(/'/g, "\\'")}')">
-                             Editar
-                        </button>
-                    </div>
-                </article>
-            `).join('');
-        } else {
-            container.innerHTML = '<p>No hay testimonios disponibles</p>';
-        }
-    } catch (error) {
-        const container = document.getElementById('testimonios-container');
-        if (container) {
-            container.innerHTML = '<p>Error cargando testimonios</p>';
-        }
-    }
 }
 
 function actualizarHero(landing) {
@@ -220,7 +184,6 @@ function actualizarTestimonios(testimonios) {
     // Crear testimonios dinámicos
     testimonios.forEach(testimonio => {
         const iniciales = obtenerIniciales(testimonio.name);
-        const estrellas = '★'.repeat(parseInt(testimonio.rating)) + '☆'.repeat(5 - parseInt(testimonio.rating));
         
         const testimonioCard = document.createElement('article');
         testimonioCard.className = 'testimonio-card scroll-animate-stagger';
@@ -229,15 +192,13 @@ function actualizarTestimonios(testimonios) {
                 <div class="cliente-avatar">${iniciales}</div>
                 <div class="cliente-info">
                     <h4>${testimonio.name}</h4>
-                    <div class="estrellas">${estrellas}</div>
+                    <div class="tiempo-relativo">${tiempoRelativo(testimonio.date)}</div>
                 </div>
             </div>
             <p>"${testimonio.description}"</p>
-            <div class="testimonio-fecha">${testimonio.date}</div>
         `;
         testimoniosGrid.appendChild(testimonioCard);
     });
-    
     
     const animateElements = document.querySelectorAll('.scroll-animate-stagger');
     animateElements.forEach((el) => observer.observe(el));

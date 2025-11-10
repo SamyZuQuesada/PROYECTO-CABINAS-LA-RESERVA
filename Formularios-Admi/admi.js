@@ -1,5 +1,11 @@
 const API_BASE_URL = 'http://localhost:3000';
 
+function obtenerFechaActual() {
+    return new Date().toISOString();
+}
+
+
+
 //carga los datos del url
 function cargarDatosDesdeURL() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -152,8 +158,9 @@ document.getElementById('form-testimonio').addEventListener('submit', async (e) 
     try {
         const datos = {
             name: name,
-            description: description
-        };
+            description: description,
+            date: obtenerFechaActual()
+};
             
         const response = await fetch(`${API_BASE_URL}/testimonios/${id}`, {
             method: 'PUT',
