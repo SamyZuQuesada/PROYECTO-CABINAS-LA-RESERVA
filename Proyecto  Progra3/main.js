@@ -70,13 +70,13 @@ function obtenerIniciales(nombre) {
 }
 
 
-// Función principal para cargar datos del backend
+//funcion principal para cargar datos del backend
 async function cargarDatosBackend() {
     try {
         const landing = await landingApi.getData();
         console.log('Datos cargados:', landing);
         
-        // Actualizar las secciones con datos del backend
+        //actualizar las secciones con datos del backend
         actualizarHero(landing);
         actualizarServicios(landing.servicios);
         actualizarTestimonios(landing.testimonios);
@@ -87,13 +87,12 @@ async function cargarDatosBackend() {
     }
 }
 
-// Función para calcular "hace cuanto tiempo"
+//funcion para calcular el tiempo
 function tiempoRelativo(fechaISO) {
     const ahora = new Date();
     const fecha = new Date(fechaISO);
     const segundos = Math.floor((ahora - fecha) / 1000);
     
-    // Calcular intervalos
     const intervalos = [
         { nombre: 'año', segundos: 31536000 },
         { nombre: 'mes', segundos: 2592000 },
@@ -168,7 +167,6 @@ function actualizarServicios(servicios) {
         carruselServicio.appendChild(slide);
     });
     
-    // Reinicializar el carrusel
     reinicializarCarrusel();
 }
 
@@ -178,10 +176,8 @@ function actualizarTestimonios(testimonios) {
     const testimoniosGrid = document.querySelector('.testimonios-grid');
     if (!testimoniosGrid) return;
     
-    // Limpiar testimonios existentes
     testimoniosGrid.innerHTML = '';
     
-    // Crear testimonios dinámicos
     testimonios.forEach(testimonio => {
         const iniciales = obtenerIniciales(testimonio.name);
         
@@ -236,7 +232,6 @@ function reinicializarCarrusel() {
     totalSlides = slides.length;
     actualizarCarrusel();
     
-    // Reiniciar auto-play
     if (carruselInterval) {
         clearInterval(carruselInterval);
     }
@@ -286,12 +281,10 @@ function inicializarSlider() {
     const imgs = document.querySelectorAll('.slider img');
     
     if (imgs.length > 0) {
-        // Limpiar intervalo anterior si existe
         if (sliderInterval) {
             clearInterval(sliderInterval);
         }
         
-        // Configurar nuevo intervalo
         sliderInterval = setInterval(showNext, 4000);
     }
 }
